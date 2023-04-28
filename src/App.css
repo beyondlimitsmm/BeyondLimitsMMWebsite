@@ -1,0 +1,6 @@
+.container {
+  @apply px-4;
+}
+.row {
+  @apply flex flex-wrap;
+}
