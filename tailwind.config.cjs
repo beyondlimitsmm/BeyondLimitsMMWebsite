@@ -73,10 +73,17 @@ module.exports = {
         "body-color": "#747E88",
         "heading-color": "#162447",
         shadow: "#9D6A6A",
+
+        //Primary blue
+        primary: "#0C58F2",
         primary3: "#91D5FF",
         primary6: "#1890FF",
         primary7: "#096DD9",
+
+        //Neutral
+        neutral7: "#8C8C8C",
         neutral8: "#595959",
+        neutral2: "#FAFAFA",
       },
 
       zIndex: {
