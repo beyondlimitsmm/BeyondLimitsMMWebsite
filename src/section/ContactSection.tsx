@@ -1,5 +1,6 @@
 import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 import Map from "../assets/Map.png";
+import Contact1 from "../assets/layers/contact-1.svg";
 
 export const ContactSection = () => {
   return (
@@ -7,7 +8,8 @@ export const ContactSection = () => {
       <div className=" w-1/2 h-96 rounded-xl">
         <img src={Map} alt="" className="h-full" />
       </div>
-      <div className="w-1/2 h-96 ContactInfo flex flex-col justify-center bg-primary px-11 gap-8 rounded-xl">
+      <div className="w-1/2 h-96 ContactInfo flex flex-col justify-center bg-primary px-11 gap-8 rounded-xl relative">
+        <img src={Contact1} alt="" className="absolute right-0" />
         <ContactInfoChild
           icon={<FiPhone />}
           title="Tel"

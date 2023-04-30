@@ -1,6 +1,10 @@
+import WhyChooseUs1 from "../assets/layers/whychooseus-1.svg";
+
 export const WhyChooseUs = () => {
   return (
-    <section className="bg-[#F6F9FF] py-20">
+    <section className="bg-[#F6F9FF] py-20 relative">
+      <img src={WhyChooseUs1} alt="" className="absolute -right-10 " />
+
       <div className="container flex justify-between">
         <div className="flex flex-col w-1/3 min-w-[480px]">
           <WhyChooseUsCard
@@ -18,8 +22,8 @@ export const WhyChooseUs = () => {
             body="Our commitment to your success extends beyond project completion. We offer ongoing support to ensure your software continues to deliver exceptional results."
           ></WhyChooseUsCard>
         </div>
-        <div className="w-2/3 flex flex-col ml-24 max-w-[670px]">
-          <h1 className="mb-6 text-[#062A73]">
+        <div className="w-2/3 flex flex-col ml-24 max-w-[670px] z-10">
+          <h1 className="mb-6 text-primaryDarkBlue">
             Why You Should Choose Beyond Limits
           </h1>
 
@@ -47,8 +51,8 @@ export const WhyChooseUsCard = ({
 }) => {
   return (
     <div className="bg-white flex justify-center items-center flex-col my-2 py-4 px-12 rounded-xl">
-      <h5 className="text-primary mb-4">{title}</h5>
-      <p className="text-center">{body}</p>
+      <h5 className="text-primary mb-4 font-medium">{title}</h5>
+      <p className="text-center text-text-secondary45">{body}</p>
     </div>
   );
 };

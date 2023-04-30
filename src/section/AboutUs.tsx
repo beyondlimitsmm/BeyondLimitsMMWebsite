@@ -3,10 +3,10 @@ export const AboutUs = () => {
     <section className="AboutUs py-10">
       <div className="container">
         <div className="bg-neutral2 px-10 py-2 mb-6 rounded-2xl">
-          <h1 className="text-primary">
+          <h1 className="text-primaryDarkBlue">
             Make an impact with Beyond Limits Technologies.
           </h1>
-          <h1 className="text-primary">
+          <h1 className="text-primaryDarkBlue">
             Join us on a journey towards digital transformation !
           </h1>
         </div>
@@ -37,10 +37,10 @@ export const AboutUsCard = ({
   body: string;
 }) => {
   return (
-    <div className="min-h-[260px] bg-neutral2 rounded-2xl p-4">
+    <div className="min-h-[260px] bg-neutral2 rounded-2xl p-4 ">
       <h4 className="text-primary">{title}</h4>
       <div className="border-b border-l-neutral8 my-4"></div>
-      <h5>{body}</h5>
+      <h5 className="text-text-primary85">{body}</h5>
     </div>
   );
 };

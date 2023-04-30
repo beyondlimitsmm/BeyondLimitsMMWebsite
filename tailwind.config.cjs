@@ -73,12 +73,15 @@ module.exports = {
         "body-color": "#747E88",
         "heading-color": "#162447",
         shadow: "#9D6A6A",
+        "text-primary85": "rgba(0, 0, 0, 0.85)",
+        "text-secondary45": "rgba(0, 0, 0, 0.45)",
 
         //Primary blue
         primary: "#0C58F2",
         primary3: "#91D5FF",
         primary6: "#1890FF",
         primary7: "#096DD9",
+        primaryDarkBlue: "#062A73",
 
         //Neutral
         neutral7: "#8C8C8C",

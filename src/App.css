@@ -4,3 +4,39 @@
 .row {
   @apply flex flex-wrap;
 }
+/* 
+.navbar-area {
+  @apply fixed top-0 left-0 w-full z-20 transition-all duration-300;
+}
+.sticky {
+  @apply fixed bg-white shadow-md;
+}
+.collapse.show {
+  @apply block;
+}
+.toggler-icon {
+  @apply relative block duration-300 bg-black;
+  height: 2px;
+  width: 30px;
+  margin: 6px 0;
+}
+.sticky .toggler-icon {
+  @apply bg-black;
+}
+.active > .toggler-icon:nth-child(1) {
+  @apply transform rotate-45;
+  top: 7px;
+}
+.active > .toggler-icon:nth-child(2) {
+  @apply opacity-0;
+}
+.active > .toggler-icon:nth-child(3) {
+  top: -8px;
+  transform: rotate(135deg);
+}
+.navbar-nav .nav-item a {
+  @apply inline-block text-base font-bold text-body-color relative z-10 py-2 lg:py-1 hover:text-theme-color;
+}
+.navbar-nav .nav-item a.active {
+  @apply text-theme-color;
+} */

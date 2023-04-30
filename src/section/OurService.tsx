@@ -16,7 +16,7 @@ export const OurService = () => {
             Transforming Businesses with Cutting-Edge Solutions
           </h1>
 
-          <h5 className="w-1/2 max-w-[520px] font-normal">
+          <h5 className="w-1/2 max-w-[520px] font-light">
             At Beyond Limits Technologies, we specialize in a wide range of
             software development servicesdesigned to help your business achieve
             its full potential. Our expertise, coupled with a deepunderstanding
@@ -65,14 +65,14 @@ export const OurServiceCard = ({ icon, title, body }: ICardInfo) => {
   return (
     <div className="flex flex-col px-6 py-4 items-center rounded-3xl  border-[3px] border-[#F5F5F5]">
       <div className="mb-6 w-20 h-20 bg-neutral2 rounded-full flex justify-center items-center">
-        <div className=" w-16 h-16 bg-primary rounded-full flex justify-center items-center text-white">
+        <div className=" w-16 h-16 bg-primary7 rounded-full flex justify-center items-center text-white">
           {icon}
         </div>
       </div>
 
       <h4 className="mb-4 text-primary">{title}</h4>
 
-      <p className="text-center">{body}</p>
+      <h5 className="text-center font-normal">{body}</h5>
     </div>
   );
 };
