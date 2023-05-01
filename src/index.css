@@ -60,6 +60,10 @@ button {
   @apply transition-all duration-300;
 }
 
+li {
+  list-style-type: none;
+}
+
 .splide__pagination {
   bottom: -32px !important;
 }

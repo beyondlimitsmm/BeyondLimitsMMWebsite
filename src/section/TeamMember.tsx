@@ -100,7 +100,10 @@ const TeamMemberList: Array<ITeamMemberCard> = [
 
 export const OurTeam = () => {
   return (
-    <section id="team" className="OurTeam bg-primary py-20 text-white relative">
+    <section
+      id="team"
+      className="OurTeam bg-primary py-20 text-white relative scroll-m-16"
+    >
       <img src={TeamMember1} alt="" className="absolute left-0 bottom-0" />
       <img src={TeamMember2} alt="" className="absolute right-0 top-0" />
       <div className="container">

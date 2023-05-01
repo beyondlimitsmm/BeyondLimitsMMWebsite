@@ -5,7 +5,7 @@ import MarketAnalysis from "../assets/lottie/market-analysis.json";
 
 export const HeroSection = () => {
   return (
-    <section className="HeroSection py-20 relative">
+    <section id="home" className="HeroSection py-20 relative scroll-m-16">
       <div className="absolute right-0 top-0 -z-10">
         <img src={Hero1} alt="" className="" />
         <img src={Hero2} alt="" className="absolute right-0 bottom-20" />

@@ -9,7 +9,7 @@ import { ICardInfo } from "./ContactSection";
 
 export const OurService = () => {
   return (
-    <section className="OurService">
+    <section id="services" className="OurService scroll-m-16">
       <div className="bg-primary py-8">
         <div className="container flex gap-14 items-center text-white">
           <h1 className=" w-1/2">

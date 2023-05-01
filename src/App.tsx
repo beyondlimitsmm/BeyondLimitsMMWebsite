@@ -1,4 +1,6 @@
 import "./App.css";
+import { Footer } from "./components/Footer";
+import { NavBar } from "./components/NavBar";
 import { AboutUs } from "./section/AboutUs";
 import { ContactSection } from "./section/ContactSection";
 import { HeroSection } from "./section/HeroSection";
@@ -10,7 +12,8 @@ import { Workflow } from "./section/Workflow";
 function App() {
   return (
     <div className="App">
-      {/* <NavBar></NavBar> */}
+      <NavBar></NavBar>
+      <div className="pt-16"></div>
       <HeroSection></HeroSection>
       <AboutUs></AboutUs>
       <OurService></OurService>
@@ -19,6 +22,7 @@ function App() {
       <WhyChooseUs></WhyChooseUs>
 
       <ContactSection></ContactSection>
+      <Footer></Footer>
     </div>
   );
 }

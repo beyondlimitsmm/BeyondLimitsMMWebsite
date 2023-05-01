@@ -1,6 +1,6 @@
 export const AboutUs = () => {
   return (
-    <section className="AboutUs py-10">
+    <section className="AboutUs py-10 scroll-m-16" id="aboutUs">
       <div className="container">
         <div className="bg-neutral2 px-10 py-2 mb-6 rounded-2xl">
           <h1 className="text-primaryDarkBlue">

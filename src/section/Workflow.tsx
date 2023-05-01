@@ -4,7 +4,7 @@ import Workflow1 from "../assets/layers/wrokflow-1.svg";
 import AppAnimation from "../assets/lottie/app-animation.json";
 export const Workflow = () => {
   return (
-    <section className="bg-[#F6F9FF] py-20 relative">
+    <section id="process" className="bg-[#F6F9FF] py-20 relative scroll-m-16">
       <img src={Workflow1} alt="" className="absolute left-0 top-0" />
       <div className="container flex z-10">
         <div className="w-1/2 z-10">

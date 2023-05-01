@@ -4,9 +4,9 @@
 .row {
   @apply flex flex-wrap;
 }
-/* 
+
 .navbar-area {
-  @apply fixed top-0 left-0 w-full z-20 transition-all duration-300;
+  @apply fixed top-0 left-0 w-full z-20 transition-all duration-300 h-16 flex items-center;
 }
 .sticky {
   @apply fixed bg-white shadow-md;
@@ -35,8 +35,10 @@
   transform: rotate(135deg);
 }
 .navbar-nav .nav-item a {
-  @apply inline-block text-base font-bold text-body-color relative z-10 py-2 lg:py-1 hover:text-theme-color;
+  @apply text-base font-bold text-body-color relative z-10 py-2 lg:py-1 hover:text-theme-color border-2 border-transparent;
 }
 .navbar-nav .nav-item a.active {
-  @apply text-theme-color;
-} */
+  transition: none;
+  border-bottom: 2px solid #1890ff;
+  color: #0a64ff;
+}

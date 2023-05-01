@@ -4,7 +4,10 @@ import Contact1 from "../assets/layers/contact-1.svg";
 
 export const ContactSection = () => {
   return (
-    <section className="container flex justify-between items-center gap-6 py-10">
+    <section
+      id="contactUs"
+      className="container flex justify-between items-center gap-6 py-10 scroll-m-16"
+    >
       <div className=" w-1/2 h-96 rounded-xl">
         <img src={Map} alt="" className="h-full" />
       </div>

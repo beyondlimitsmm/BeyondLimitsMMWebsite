@@ -2,7 +2,7 @@ import WhyChooseUs1 from "../assets/layers/whychooseus-1.svg";
 
 export const WhyChooseUs = () => {
   return (
-    <section className="bg-[#F6F9FF] py-20 relative">
+    <section id="whyUs" className="bg-[#F6F9FF] py-20 relative scroll-m-16">
       <img src={WhyChooseUs1} alt="" className="absolute -right-10 " />
 
       <div className="container flex justify-between">
