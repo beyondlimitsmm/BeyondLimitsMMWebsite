@@ -1,17 +1,13 @@
 import { motion } from "framer-motion";
 
 export const AboutUs = () => {
-  const variants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.5 } },
-  };
   return (
-    <section className="AboutUs py-20" id="aboutUs">
+    <section className="AboutUs py-10 md:py-20" id="aboutUs">
       <motion.div
         className="container"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
         viewport={{ once: true }}
       >
         <div className="bg-neutral2 px-4 md:px-10 py-2 mb-6 rounded-2xl">
@@ -25,7 +21,7 @@ export const AboutUs = () => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-3 gap-6"
         >

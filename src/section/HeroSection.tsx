@@ -6,7 +6,7 @@ import MarketAnalysis from "../assets/lottie/market-analysis.json";
 export const HeroSection = () => {
   return (
     <section id="home" className="HeroSection py-10 md:pt-48 md:pb-0 relative">
-      <div className="absolute scale-75 -right-28 -z-10 top-20 md:right-0 md:top-0 md:scale-100">
+      <div className="absolute scale-75 -right-28 -z-10 top-36 md:right-0 md:top-10 md:scale-100">
         <img src={Hero1} alt="" className="" />
         <img src={Hero2} alt="" className="absolute right-0 bottom-20" />
       </div>
@@ -17,7 +17,7 @@ export const HeroSection = () => {
             Innovative Software Solutions for
             <span className="text-primary7"> Digital World</span>
           </h1>
-          <h5 className="mt-20 mb-5 md:my-5 text-text-secondary45 font-medium">
+          <h5 className="mt-16 mb-5 md:my-5 text-text-secondary45 font-medium">
             Beyond Limits Technologies specializes in creating
             <span className="text-black font-bold">
               {" "}
@@ -52,7 +52,7 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        <h1 className="block md:hidden text-[2rem] leading-[2.5rem] pb-10 mx-6 text-text-secondary45">
+        <h1 className="block md:hidden text-[2rem] leading-[2.5rem] my-14 mx-6 text-text-secondary45">
           Innovative Software Solutions for
           <span className="text-primary7"> Digital World</span>
         </h1>

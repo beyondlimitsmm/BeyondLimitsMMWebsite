@@ -82,7 +82,9 @@ export const SocialCircle = ({
 }) => {
   return (
     <div
-      className={`rounded-full border border-text-secondary45 w-8 h-8 flex justify-center items-center text-black ${customStyle}`}
+      className={`rounded-full border w-8 h-8 flex justify-center items-center text-black ${
+        customStyle === undefined ? " border-text-secondary45" : customStyle
+      }`}
     >
       <a href={link} className="">
         {icon}
