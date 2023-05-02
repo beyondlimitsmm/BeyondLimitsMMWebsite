@@ -6,12 +6,12 @@ export const ContactSection = () => {
   return (
     <section
       id="contactUs"
-      className="container flex justify-between items-center gap-6 py-10 scroll-m-16"
+      className="container flex flex-col md:flex-row justify-between items-center gap-6 py-10 "
     >
-      <div className=" w-1/2 h-96 rounded-xl">
+      <div className="md:w-1/2 h-56 md:h-96 rounded-xl">
         <img src={Map} alt="" className="h-full" />
       </div>
-      <div className="w-1/2 h-96 ContactInfo flex flex-col justify-center bg-primary px-11 gap-8 rounded-xl relative">
+      <div className="md:w-1/2 h-72 md:h-96 ContactInfo flex flex-col justify-center bg-primary px-8 md:px-11 gap-8 rounded-xl relative overflow-hidden">
         <img src={Contact1} alt="" className="absolute right-0" />
         <ContactInfoChild
           icon={<FiPhone />}

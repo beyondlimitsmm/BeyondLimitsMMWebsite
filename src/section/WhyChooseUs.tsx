@@ -2,11 +2,21 @@ import WhyChooseUs1 from "../assets/layers/whychooseus-1.svg";
 
 export const WhyChooseUs = () => {
   return (
-    <section id="whyUs" className="bg-[#F6F9FF] py-20 relative scroll-m-16">
-      <img src={WhyChooseUs1} alt="" className="absolute -right-10 " />
+    <section
+      id="whyUs"
+      className="bg-[#F6F9FF] py-10 md:py-20 relative scroll-m-16 overflow-hidden"
+    >
+      <img
+        src={WhyChooseUs1}
+        alt=""
+        className="absolute  scale-50 -right-32 -top-20 md:top-0 md:-right-10 md:scale-100"
+      />
 
-      <div className="container flex justify-between">
-        <div className="flex flex-col w-1/3 min-w-[480px]">
+      <div className="container flex flex-col md:flex-row justify-between">
+        <h1 className="mb-6 text-primaryDarkBlue block md:hidden mx-4">
+          Why You Should Choose Beyond Limits
+        </h1>
+        <div className="flex flex-col md:w-1/3 max-w-[480px] z-10">
           <WhyChooseUsCard
             title="Customized Solutions"
             body="We develop bespoke software solutions that address your unique business challenges, streamline processes, and maximize efficiency. Our custom software solutions are designed to grow with your business, ensuring long-term success."
@@ -22,8 +32,8 @@ export const WhyChooseUs = () => {
             body="Our commitment to your success extends beyond project completion. We offer ongoing support to ensure your software continues to deliver exceptional results."
           ></WhyChooseUsCard>
         </div>
-        <div className="w-2/3 flex flex-col ml-24 max-w-[670px] z-10">
-          <h1 className="mb-6 text-primaryDarkBlue">
+        <div className="md:w-2/3 flex flex-col md:ml-24 max-w-[670px] z-10">
+          <h1 className="mb-6 text-primaryDarkBlue hidden md:block">
             Why You Should Choose Beyond Limits
           </h1>
 

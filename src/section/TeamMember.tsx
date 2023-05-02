@@ -102,19 +102,27 @@ export const OurTeam = () => {
   return (
     <section
       id="team"
-      className="OurTeam bg-primary py-20 text-white relative scroll-m-16"
+      className="OurTeam bg-primary pt-10 pb-14 md:py-20 text-white relative scroll-m-16"
     >
-      <img src={TeamMember1} alt="" className="absolute left-0 bottom-0" />
-      <img src={TeamMember2} alt="" className="absolute right-0 top-0" />
-      <div className="container">
+      <div className="container ">
         <div className="row justify-center">
           <div className="w-full lg:w-1/2">
             <div className="text-center pb-6">
               <h3 className="">Modest Team</h3>
-              <h1 className="">But with a big passion</h1>
+              <h1 className="z-20">But with a big passion</h1>
             </div>
           </div>
         </div>
+        <img
+          src={TeamMember1}
+          alt=""
+          className="absolute scale-50 md:scale-100 -left-20 -bottom-28  md:left-0 md:bottom-0"
+        />
+        <img
+          src={TeamMember2}
+          alt=""
+          className="absolute scale-50 md:scale-100 -right-24 -top-32  md:right-0 md:top-0"
+        />
 
         <div className="team-wrapper relative">
           <Splide
@@ -168,7 +176,7 @@ const OurTeamCard = ({
           <img
             src={profileUrl}
             alt=""
-            className="w-[160px] h-[160px] rounded-full"
+            className="w-[124px] h-[124px]  md:w-[160px] md:h-[160px] rounded-full"
           />
         </div>
         <div className="member_info text-center flex flex-col gap-2 mb-6">

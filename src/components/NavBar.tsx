@@ -5,6 +5,8 @@ export const NavBar = () => {
   const [navbarTogglerClass, setNavbarTogglerClass] = useState("");
 
   const handleMenuOnScroll = () => {
+    const maxScrollableHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
     const sections = document.querySelectorAll(".page-scroll");
     const scrollPos =
       window.pageYOffset ||
@@ -16,7 +18,12 @@ export const NavBar = () => {
       const val = currLink.getAttribute("href");
       const refElement = document.querySelector(val!) as HTMLElement;
       const scrollTopMinus = scrollPos + 64;
-      if (
+
+      if (scrollPos === maxScrollableHeight) {
+        document.querySelector(".page-scroll")?.classList.remove("active");
+        sections[sections.length - 2].classList.remove("active");
+        sections[sections.length - 1].classList.add("active");
+      } else if (
         refElement &&
         refElement.offsetTop <= scrollTopMinus &&
         refElement.offsetTop + refElement.offsetHeight > scrollTopMinus

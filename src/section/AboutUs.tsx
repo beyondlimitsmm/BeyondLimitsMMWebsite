@@ -1,8 +1,20 @@
+import { motion } from "framer-motion";
+
 export const AboutUs = () => {
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.5 } },
+  };
   return (
-    <section className="AboutUs py-10 scroll-m-16" id="aboutUs">
-      <div className="container">
-        <div className="bg-neutral2 px-10 py-2 mb-6 rounded-2xl">
+    <section className="AboutUs py-20" id="aboutUs">
+      <motion.div
+        className="container"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
+        <div className="bg-neutral2 px-4 md:px-10 py-2 mb-6 rounded-2xl">
           <h1 className="text-primaryDarkBlue">
             Make an impact with Beyond Limits Technologies.
           </h1>
@@ -10,7 +22,13 @@ export const AboutUs = () => {
             Join us on a journey towards digital transformation !
           </h1>
         </div>
-        <div className="grid grid-cols-3 gap-6">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+        >
           <AboutUsCard
             title="Our vision"
             body="To become a global leader in software development, recognized for our unwavering commitment to innovation, quality, and customer success, while inspiring others to push the boundaries of what technology can achieve."
@@ -23,8 +41,8 @@ export const AboutUs = () => {
             title="About us"
             body="Beyond Limits Technologies is dedicated to empowering businesses with innovative, tailor-made software solutions that propel them towards success. Our mission is to create cutting-edge, reliable, and scalable digital products that elevate our clients' operations and help them stay ahead of the curve in an increasingly competitive landscape."
           ></AboutUsCard>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
