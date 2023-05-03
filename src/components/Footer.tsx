@@ -3,61 +3,72 @@ import Logo from "/tab_logo.png";
 
 export const Footer = () => {
   return (
-    <section className="Footer flex flex-col md:flex-row container mb-12 mx-4 md:mx-auto md:mb-24 gap-6 md:gap-0 justify-center">
-      <div className="md:w-1/4">
-        <div className="flex items-center mb-3">
-          <img
-            src={Logo}
-            alt=""
-            width={32}
-            height={32}
-            className="rounded-lg overflow-hidden"
-          />
-          <h5 className="text-primary ml-2">Beyond Limits</h5>
+    <section className="Footer container mx-6 mb-12 sm:mx-auto lg:mb-24 ">
+      <div className="flex flex-col justify-center gap-6 md:flex-row md:gap-0">
+        <div className="md:w-1/2 lg:w-1/4">
+          <div className="mb-3 flex items-center">
+            <img
+              src={Logo}
+              alt=""
+              width={32}
+              height={32}
+              className="overflow-hidden rounded-lg"
+            />
+            <h5 className="ml-2 text-primary">Beyond Limits</h5>
+          </div>
+          <p className="max-w-[250px] text-text-secondary45">
+            We are top rated Digital Marketing and Software Provider in Myanmar.
+          </p>
         </div>
-        <p className="text-text-secondary45 max-w-[250px]">
-          We are top rated Digital Marketing and Software Provider in Myanmar.
-        </p>
+        <div className="row md:w-1/2 lg:w-1/3">
+          <li className="flex w-20 items-center lg:w-24">
+            <a className="" href="#home">
+              Home
+            </a>
+          </li>
+          <li className="flex w-20 items-center lg:w-24">
+            <a className="" href="#aboutUs">
+              About Us
+            </a>
+          </li>
+          <li className="flex w-20 items-center lg:w-24">
+            <a className="" href="#services">
+              Services
+            </a>
+          </li>
+          <li className="flex w-20 items-center lg:w-24">
+            <a className="" href="#process">
+              Process
+            </a>
+          </li>
+          <li className="flex w-20 items-center lg:w-24">
+            <a className="" href="#team">
+              Team
+            </a>
+          </li>
+          <li className="flex w-20 items-center lg:w-24">
+            <a className="" href="#whyUs">
+              Why Us
+            </a>
+          </li>
+          <li className="flex w-20 items-center lg:w-24">
+            <a className="" href="#contactUs">
+              Contact Us
+            </a>
+          </li>
+        </div>
+        <div className="flex gap-3 md:hidden lg:flex lg:w-1/4">
+          <SocialCircle icon={<FiTwitter />} link=""></SocialCircle>
+          <SocialCircle
+            icon={<FiFacebook />}
+            customStyle="bg-primary text-white border-primary"
+            link=""
+          ></SocialCircle>
+          <SocialCircle icon={<FiInstagram />} link=""></SocialCircle>
+          <SocialCircle icon={<FiGithub />} link=""></SocialCircle>
+        </div>
       </div>
-      <div className="md:w-1/3 row">
-        <li className="md:w-24 w-20 flex items-center">
-          <a className="" href="#home">
-            Home
-          </a>
-        </li>
-        <li className="md:w-24 w-20 flex items-center">
-          <a className="" href="#aboutUs">
-            About Us
-          </a>
-        </li>
-        <li className="md:w-24 w-20 flex items-center">
-          <a className="" href="#services">
-            Services
-          </a>
-        </li>
-
-        <li className="md:w-24 w-20 flex items-center">
-          <a className="" href="#process">
-            Process
-          </a>
-        </li>
-        <li className="md:w-24 w-20 flex items-center">
-          <a className="" href="#team">
-            Team
-          </a>
-        </li>
-        <li className="md:w-24 w-20 flex items-center">
-          <a className="" href="#whyUs">
-            Why Us
-          </a>
-        </li>
-        <li className="md:w-24 w-20 flex items-center">
-          <a className="" href="#contactUs">
-            Contact Us
-          </a>
-        </li>
-      </div>
-      <div className="md:w-1/4 flex gap-3">
+      <div className="mt-4 hidden gap-3 md:flex md:w-1/4 lg:hidden">
         <SocialCircle icon={<FiTwitter />} link=""></SocialCircle>
         <SocialCircle
           icon={<FiFacebook />}
@@ -82,7 +93,7 @@ export const SocialCircle = ({
 }) => {
   return (
     <div
-      className={`rounded-full border w-8 h-8 flex justify-center items-center text-black ${
+      className={`flex h-8 w-8 items-center justify-center rounded-full border text-black ${
         customStyle === undefined ? " border-text-secondary45" : customStyle
       }`}
     >

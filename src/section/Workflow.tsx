@@ -7,23 +7,23 @@ export const Workflow = () => {
   return (
     <section
       id="process"
-      className="bg-[#F6F9FF] py-10  md:py-20 relative scroll-m-16"
+      className="relative scroll-m-16  bg-[#F6F9FF] py-10 lg:py-20"
     >
       <img
         src={Workflow1}
         alt=""
-        className="absolute scale-75 -left-20 -top-20  md:scale-100 md:left-0 md:top-0 "
+        className="absolute -left-20 -top-20 scale-75  lg:left-0 lg:top-0 lg:scale-100 "
       />
-      <div className="container flex flex-col md:flex-row z-10">
-        <div className="md:w-1/2 z-10">
+      <div className="container z-10 flex flex-col md:flex-row">
+        <div className="z-10 md:w-1/2">
           <h1 className="text-primaryDarkBlue">
             Development Process & Methodology
           </h1>
-          <div className="mx-auto md:mx-0 my-10 rounded-3xl w-[320px] h-[320px] md:w-[500px]  md:h-[500px]  overflow-hidden">
+          <div className="mx-auto my-10 h-[320px] w-[320px] overflow-hidden rounded-3xl md:mx-0  lg:h-[500px]  lg:w-[500px]">
             <Lottie
               animationData={AppAnimation}
               loop={true}
-              className="w-[320px]  h-[320px] md:w-[500px] md:h-[500px] rounded-3xl bg-white"
+              className="h-[320px] w-[320px] rounded-3xl bg-white lg:h-[500px] lg:w-[500px]"
             />
           </div>
         </div>
@@ -69,16 +69,17 @@ export const WorkFlowPanel = () => {
     <div>
       {PanelItem.map((el, index) => (
         <div
-          className={`hover:border-2 hover:border-primary my-2 rounded-xl border-2 border-transparent ${
+          key={index}
+          className={`my-2 rounded-xl border-2 border-transparent hover:border-2 hover:border-primary ${
             index === activeIndex && "hover:border-transparent"
           }`}
         >
           <div
             key={index}
             onClick={() => setActiveIndex(index)}
-            className={`px-6 py-4 text-center rounded-xl duration-500 ease-in-out transition-[max-height] overflow-hidden max-h-24 ${
+            className={`max-h-24 overflow-hidden rounded-xl px-6 py-4 text-center transition-[max-height] duration-500 ease-in-out ${
               index === activeIndex
-                ? "bg-primary text-white max-h-48"
+                ? "max-h-48 bg-primary text-white"
                 : " bg-white"
             }`}
           >

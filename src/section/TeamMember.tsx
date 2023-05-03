@@ -102,26 +102,26 @@ export const OurTeam = () => {
   return (
     <section
       id="team"
-      className="OurTeam bg-primary pt-10 pb-14 md:py-20 text-white relative scroll-m-16"
+      className="OurTeam relative scroll-m-16 overflow-hidden bg-primary pt-10 pb-14 text-white md:py-20"
     >
       <div className="container ">
         <div className="row justify-center">
           <div className="w-full lg:w-1/2">
-            <div className="text-center pb-6">
+            <div className="pb-6 text-center">
               <h3 className="">Modest Team</h3>
-              <h1 className="z-20">But with a big passion</h1>
+              <h1 className="relative z-20">But with a big passion</h1>
             </div>
           </div>
         </div>
         <img
           src={TeamMember1}
           alt=""
-          className="absolute scale-50 md:scale-100 -left-20 -bottom-28  md:left-0 md:bottom-0"
+          className="absolute -left-20 -bottom-28 scale-50 md:left-0  md:bottom-0 md:scale-100"
         />
         <img
           src={TeamMember2}
           alt=""
-          className="absolute scale-50 md:scale-100 -right-24 -top-32  md:right-0 md:top-0"
+          className="absolute -right-24 -top-32 scale-50 md:right-0  md:top-0 md:scale-100"
         />
 
         <div className="team-wrapper relative">
@@ -172,16 +172,16 @@ const OurTeamCard = ({
   return (
     <div className="OurTeamCard">
       <div className="flex flex-col justify-center">
-        <div className="bg-white rounded-3xl flex justify-center items-center py-8 mb-2">
+        <div className="mb-2 flex items-center justify-center rounded-3xl bg-white py-8">
           <img
             src={profileUrl}
             alt=""
-            className="w-[124px] h-[124px]  md:w-[160px] md:h-[160px] rounded-full"
+            className="h-[124px] w-[124px]  rounded-full md:h-[160px] md:w-[160px]"
           />
         </div>
-        <div className="member_info text-center flex flex-col gap-2 mb-6">
+        <div className="member_info mb-6 flex flex-col gap-2 text-center">
           <h3>{name}</h3>
-          <div className="flex justify-center items-center font-light">
+          <div className="flex items-center justify-center font-light">
             {role.map((e, index) => {
               if (index !== role.length - 1) {
                 return <h5 key={index}>{e} |&nbsp;</h5>;

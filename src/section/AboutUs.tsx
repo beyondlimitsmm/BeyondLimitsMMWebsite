@@ -10,11 +10,11 @@ export const AboutUs = () => {
         transition={{ duration: 0.5, delay: 0.1 }}
         viewport={{ once: true }}
       >
-        <div className="bg-neutral2 px-4 md:px-10 py-2 mb-6 rounded-2xl">
-          <h1 className="text-primaryDarkBlue">
+        <div className="mb-6 rounded-2xl bg-neutral2 px-4 py-2 md:px-10">
+          <h1 className="text-primaryDarkBlue md:text-4xl">
             Make an impact with Beyond Limits Technologies.
           </h1>
-          <h1 className="text-primaryDarkBlue">
+          <h1 className="text-primaryDarkBlue md:text-4xl">
             Join us on a journey towards digital transformation !
           </h1>
         </div>
@@ -23,7 +23,7 @@ export const AboutUs = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
         >
           <AboutUsCard
             title="Our vision"
@@ -51,9 +51,9 @@ export const AboutUsCard = ({
   body: string;
 }) => {
   return (
-    <div className="min-h-[260px] bg-neutral2 rounded-2xl p-4 ">
+    <div className="min-h-[260px] rounded-2xl bg-neutral2 p-4 ">
       <h4 className="text-primary">{title}</h4>
-      <div className="border-b border-l-neutral8 my-4"></div>
+      <div className="my-4 border-b border-l-neutral8"></div>
       <h5 className="text-text-primary85">{body}</h5>
     </div>
   );

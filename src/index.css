@@ -21,7 +21,7 @@ section {
 
 *:focus,
 button:focus {
-  @apply outline-none shadow-none;
+  @apply shadow-none outline-none;
   outline-offset: none;
   outline: none;
 }

@@ -4,19 +4,19 @@ export const WhyChooseUs = () => {
   return (
     <section
       id="whyUs"
-      className="bg-[#F6F9FF] py-10 md:py-20 relative scroll-m-16 overflow-hidden"
+      className="relative scroll-m-16 overflow-hidden bg-[#F6F9FF] py-10 lg:py-20"
     >
       <img
         src={WhyChooseUs1}
         alt=""
-        className="absolute  scale-50 -right-32 -top-20 md:top-0 md:-right-10 md:scale-100"
+        className="absolute  -right-32 -top-20 scale-50 md:top-20 md:scale-75 lg:top-0 lg:-right-10 lg:scale-100"
       />
 
-      <div className="container flex flex-col md:flex-row justify-between">
-        <h1 className="mb-6 text-primaryDarkBlue block md:hidden mx-4">
+      <div className="container flex flex-col justify-between lg:flex-row lg:justify-center">
+        <h1 className="z-10 mx-4 mb-6 block text-primaryDarkBlue lg:hidden">
           Why You Should Choose Beyond Limits
         </h1>
-        <div className="flex flex-col md:w-1/3 max-w-[480px] z-10">
+        <div className="z-10 flex flex-col lg:w-1/3 lg:max-w-[480px]">
           <WhyChooseUsCard
             title="Customized Solutions"
             body="We develop bespoke software solutions that address your unique business challenges, streamline processes, and maximize efficiency. Our custom software solutions are designed to grow with your business, ensuring long-term success."
@@ -32,8 +32,8 @@ export const WhyChooseUs = () => {
             body="Our commitment to your success extends beyond project completion. We offer ongoing support to ensure your software continues to deliver exceptional results."
           ></WhyChooseUsCard>
         </div>
-        <div className="md:w-2/3 flex flex-col md:ml-24 max-w-[670px] z-10">
-          <h1 className="mb-6 text-primaryDarkBlue hidden md:block">
+        <div className="z-10 flex flex-col lg:ml-24 lg:w-2/3 lg:max-w-[670px]">
+          <h1 className="mb-6 hidden text-primaryDarkBlue lg:block">
             Why You Should Choose Beyond Limits
           </h1>
 
@@ -60,8 +60,8 @@ export const WhyChooseUsCard = ({
   body: string;
 }) => {
   return (
-    <div className="bg-white flex justify-center items-center flex-col my-2 py-4 px-12 rounded-xl">
-      <h5 className="text-primary mb-4 font-medium">{title}</h5>
+    <div className="my-2 flex flex-col items-center justify-center rounded-xl bg-white py-4 px-12">
+      <h5 className="mb-4 font-medium text-primary">{title}</h5>
       <p className="text-center text-text-secondary45">{body}</p>
     </div>
   );

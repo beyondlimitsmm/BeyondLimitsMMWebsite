@@ -5,54 +5,57 @@ import MarketAnalysis from "../assets/lottie/market-analysis.json";
 
 export const HeroSection = () => {
   return (
-    <section id="home" className="HeroSection py-10 md:pt-48 md:pb-0 relative">
-      <div className="absolute scale-75 -right-28 -z-10 top-36 md:right-0 md:top-10 md:scale-100">
+    <section
+      id="home"
+      className="HeroSection relative py-10 md:pt-32 md:pb-0 lg:pt-48"
+    >
+      <div className="absolute -right-28 top-36 -z-10 scale-75 md:-top-10 lg:right-0 lg:top-10 lg:scale-100">
         <img src={Hero1} alt="" className="" />
         <img src={Hero2} alt="" className="absolute right-0 bottom-20" />
       </div>
 
-      <div className="container flex flex-col-reverse md:flex-row items-center justify-between">
-        <div className="w-4/5 md:w-1/2 md:ml-10 md:mr-24">
-          <h1 className="hidden md:block md:text-[4rem] leading-[5rem] text-text-secondary45">
+      <div className="container flex flex-col-reverse items-center justify-between md:flex-row">
+        <div className="w-4/5 md:mr-8 md:w-1/2 lg:ml-10 lg:mr-24">
+          <h1 className="hidden font-medium leading-[2.5rem] text-text-secondary45 md:block md:text-[2rem] lg:text-[4rem] lg:leading-[5rem]">
             Innovative Software Solutions for
             <span className="text-primary7"> Digital World</span>
           </h1>
-          <h5 className="mt-16 mb-5 md:my-5 text-text-secondary45 font-medium">
+          <h5 className="mt-16 mb-5 font-medium text-text-secondary45 md:my-5">
             Beyond Limits Technologies specializes in creating
-            <span className="text-black font-bold">
+            <span className="font-bold text-black">
               {" "}
               cutting-edge, tailor-made software solutions{" "}
             </span>
             that empower businesses to thrive in a rapidly evolving digital
             landscape. Our team of
-            <span className="text-black font-bold">
+            <span className="font-bold text-black">
               {" "}
               dedicated professionals{" "}
             </span>
             combines passion, expertise, and a relentless pursuit of innovation
             to
-            <span className="text-black font-bold">
+            <span className="font-bold text-black">
               {" "}
               deliver exceptional results{" "}
             </span>
             for our clients.
           </h5>
 
-          <button className="bg-primary6 text-white rounded-xl px-4 py-2">
+          <button className="rounded-xl bg-primary6 px-4 py-2 text-white">
             Learn More
           </button>
         </div>
-        <div className="md:mr-14">
-          <div className="w-[320px] h-[320px] md:w-[500px] md:h-[500px] rounded-3xl overflow-hidden ">
+        <div className="lg:mr-14">
+          <div className="h-[320px] w-[320px] overflow-hidden rounded-3xl md:h-[336px]  md:w-[336px] lg:h-[500px] lg:w-[500px] ">
             <Lottie
               animationData={MarketAnalysis}
               loop={true}
-              className="w-[320px] h-[320px] md:w-[500px] md:h-[500px] rounded-3xl bg-white "
+              className="h-[320px] w-[320px] rounded-3xl bg-white md:h-[336px]  md:w-[336px] lg:h-[500px] lg:w-[500px] "
             />
           </div>
         </div>
 
-        <h1 className="block md:hidden text-[2rem] leading-[2.5rem] my-14 mx-6 text-text-secondary45">
+        <h1 className="my-14 mx-6 block text-[2rem] leading-[2.5rem] text-text-secondary45 md:hidden">
           Innovative Software Solutions for
           <span className="text-primary7"> Digital World</span>
         </h1>
