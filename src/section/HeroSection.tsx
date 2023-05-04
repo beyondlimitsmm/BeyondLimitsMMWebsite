@@ -5,13 +5,10 @@ import MarketAnalysis from "../assets/lottie/market-analysis.json";
 
 export const HeroSection = () => {
   return (
-    <section
-      id="home"
-      className="HeroSection relative py-10 md:pt-32 md:pb-0 lg:pt-48"
-    >
+    <section id="home" className="HeroSection relative py-10 md:pb-20 md:pt-32">
       <div className="absolute -right-28 top-36 -z-10 scale-75 md:-top-10 lg:right-0 lg:top-10 lg:scale-100">
         <img src={Hero1} alt="" className="" />
-        <img src={Hero2} alt="" className="absolute right-0 bottom-20" />
+        <img src={Hero2} alt="" className="absolute bottom-20 right-0" />
       </div>
 
       <div className="container flex flex-col-reverse items-center justify-between md:flex-row">
@@ -20,7 +17,7 @@ export const HeroSection = () => {
             Innovative Software Solutions for
             <span className="text-primary7"> Digital World</span>
           </h1>
-          <h5 className="mt-16 mb-5 font-medium text-text-secondary45 md:my-5">
+          <h5 className="mb-5 mt-16 font-medium text-text-secondary45 md:my-5">
             Beyond Limits Technologies specializes in creating
             <span className="font-bold text-black">
               {" "}
@@ -55,7 +52,7 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        <h1 className="my-14 mx-6 block text-[2rem] leading-[2.5rem] text-text-secondary45 md:hidden">
+        <h1 className="mx-6 my-14 block text-[2rem] leading-[2.5rem] text-text-secondary45 md:hidden">
           Innovative Software Solutions for
           <span className="text-primary7"> Digital World</span>
         </h1>

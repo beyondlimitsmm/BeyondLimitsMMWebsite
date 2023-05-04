@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  plugins: [],
   theme: {
     container: {
       center: true,
@@ -84,6 +85,9 @@ module.exports = {
         neutral8: "#595959",
         neutral2: "#FAFAFA",
       },
+      transitionProperty: {
+        height: "height",
+      },
 
       zIndex: {
         "-10": "-10",
@@ -98,5 +102,4 @@ module.exports = {
       },
     },
   },
-  plugins: [],
 };

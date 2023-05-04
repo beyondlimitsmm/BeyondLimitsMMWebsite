@@ -80,7 +80,7 @@ export const NavBar = () => {
         ></MobileSlideInNav>
         {openNavBar && (
           <div
-            className="absolute right-0 left-0 top-full bottom-0 h-screen w-screen bg-black opacity-25"
+            className=" absolute right-0 left-0 top-full bottom-0 h-screen w-screen bg-black opacity-25"
             onClick={() => setOpenNavBar(false)}
           ></div>
         )}

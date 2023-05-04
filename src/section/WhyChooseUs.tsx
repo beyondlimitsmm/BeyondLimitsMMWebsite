@@ -9,7 +9,7 @@ export const WhyChooseUs = () => {
       <img
         src={WhyChooseUs1}
         alt=""
-        className="absolute  -right-32 -top-20 scale-50 md:top-20 md:scale-75 lg:top-0 lg:-right-10 lg:scale-100"
+        className="absolute -right-32 -top-20 scale-50 md:top-20 md:scale-75 lg:-right-10 lg:top-0 lg:scale-100"
       />
 
       <div className="container flex flex-col justify-between lg:flex-row lg:justify-center">
@@ -32,7 +32,7 @@ export const WhyChooseUs = () => {
             body="Our commitment to your success extends beyond project completion. We offer ongoing support to ensure your software continues to deliver exceptional results."
           ></WhyChooseUsCard>
         </div>
-        <div className="z-10 flex flex-col lg:ml-24 lg:w-2/3 lg:max-w-[670px]">
+        <div className="z-10 flex flex-col lg:ml-12 lg:w-2/3 lg:max-w-[670px] xl:ml-24">
           <h1 className="mb-6 hidden text-primaryDarkBlue lg:block">
             Why You Should Choose Beyond Limits
           </h1>
@@ -60,7 +60,7 @@ export const WhyChooseUsCard = ({
   body: string;
 }) => {
   return (
-    <div className="my-2 flex flex-col items-center justify-center rounded-xl bg-white py-4 px-12">
+    <div className="my-2 flex flex-col items-center justify-center rounded-xl bg-white px-12 py-4">
       <h5 className="mb-4 font-medium text-primary">{title}</h5>
       <p className="text-center text-text-secondary45">{body}</p>
     </div>

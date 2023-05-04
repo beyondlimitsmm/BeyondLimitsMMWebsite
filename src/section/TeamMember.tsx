@@ -2,7 +2,13 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import AungHtetPaing from "../assets/TeamMember/AungHtetPaing.svg";
 import KyawZinHtun from "../assets/TeamMember/KyawZinHtun.svg";
+import MinBala from "../assets/TeamMember/MinBala.svg";
+import NyanLinSoe from "../assets/TeamMember/NyanLinSoe.svg";
 import SeintSinsarLwin from "../assets/TeamMember/SeintSinsarLwin.svg";
+import ThetOoAung from "../assets/TeamMember/ThetOoAung.svg";
+import WaiYanKyaw from "../assets/TeamMember/WaiYanKyaw.svg";
+import WaiYanMinKhant from "../assets/TeamMember/WaiYanMinKhant.svg";
+import YeMyoAung from "../assets/TeamMember/YeMyoAung.svg";
 import TeamMember1 from "../assets/layers/member-1.svg";
 import TeamMember2 from "../assets/layers/member-2.svg";
 
@@ -60,7 +66,20 @@ const TeamMemberList: Array<ITeamMemberCard> = [
       "brings a wealth of design experience to Beyond Limits Technologies",
   },
   {
-    profileUrl: AungHtetPaing,
+    profileUrl: YeMyoAung,
+    name: "Ye Myo Aung",
+    role: ["CTO"],
+    socials: {
+      facebook: "",
+      twitter: "",
+      linkedin: "",
+      github: "",
+    },
+    description:
+      "brings a wealth of technical experiences to Beyond Limits Technologies",
+  },
+  {
+    profileUrl: ThetOoAung,
     name: "Thet Oo Aung",
     role: ["Frontend Developer"],
     socials: {
@@ -69,32 +88,63 @@ const TeamMemberList: Array<ITeamMemberCard> = [
       linkedin: "",
       github: "",
     },
-    description: "",
+    description:
+      "A technology enthusiast with a deep understanding of emerging trends",
   },
 
   {
-    profileUrl: KyawZinHtun,
-    name: "Min Ye",
-    role: ["Designer", "UI/UX"],
-    socials: {
-      twitter: "",
-      facebook: "",
-      linkedin: "",
-      github: "",
-    },
-    description: "",
-  },
-  {
-    profileUrl: SeintSinsarLwin,
+    profileUrl: WaiYanMinKhant,
     name: "Wai Yan Min Khant",
     role: ["Mobile Developer"],
     socials: {
-      facebook: "",
       twitter: "",
+      facebook: "",
       linkedin: "",
       github: "",
     },
-    description: "",
+    description:
+      "brings a wealth of developer  experience to Beyond Limits Technologies",
+  },
+
+  {
+    profileUrl: NyanLinSoe,
+    name: "Nyan Lin Soe",
+    role: ["Project Manager"],
+    socials: {
+      twitter: "",
+      facebook: "",
+      linkedin: "",
+      github: "",
+    },
+    description:
+      "With exceptional organizational skills and a keen eye for detail",
+  },
+
+  {
+    profileUrl: MinBala,
+    name: "Min Bala",
+    role: ["Backend Developer"],
+    socials: {
+      twitter: "",
+      facebook: "",
+      linkedin: "",
+      github: "",
+    },
+    description:
+      "A visionary developer with extensive experience in software development",
+  },
+  {
+    profileUrl: WaiYanKyaw,
+    name: "Wai Yan Kyaw",
+    role: ["Backend Developer"],
+    socials: {
+      twitter: "",
+      facebook: "",
+      linkedin: "",
+      github: "",
+    },
+    description:
+      "A technology enthusiast with a deep understanding of emerging trends",
   },
 ];
 
@@ -102,7 +152,7 @@ export const OurTeam = () => {
   return (
     <section
       id="team"
-      className="OurTeam relative scroll-m-16 overflow-hidden bg-primary pt-10 pb-14 text-white md:py-20"
+      className="OurTeam relative scroll-m-16 overflow-hidden bg-primary pb-14 pt-10 text-white md:py-20"
     >
       <div className="container ">
         <div className="row justify-center">
@@ -116,7 +166,7 @@ export const OurTeam = () => {
         <img
           src={TeamMember1}
           alt=""
-          className="absolute -left-20 -bottom-28 scale-50 md:left-0  md:bottom-0 md:scale-100"
+          className="absolute -bottom-28 -left-20 scale-50 md:bottom-0  md:left-0 md:scale-100"
         />
         <img
           src={TeamMember2}

@@ -82,7 +82,6 @@ export const OurServiceCard = ({ icon, title, body }: ICardInfo) => {
       </div>
 
       <h4 className="mb-4 text-primary">{title}</h4>
-
       <h5 className="text-center font-normal">{body}</h5>
     </div>
   );

@@ -7,7 +7,7 @@ export const Workflow = () => {
   return (
     <section
       id="process"
-      className="relative scroll-m-16  bg-[#F6F9FF] py-10 lg:py-20"
+      className="relative h-auto scroll-m-16 overflow-y-hidden bg-[#F6F9FF] py-10 lg:h-[900px] lg:py-20"
     >
       <img
         src={Workflow1}
@@ -19,7 +19,7 @@ export const Workflow = () => {
           <h1 className="text-primaryDarkBlue">
             Development Process & Methodology
           </h1>
-          <div className="mx-auto my-10 h-[320px] w-[320px] overflow-hidden rounded-3xl md:mx-0  lg:h-[500px]  lg:w-[500px]">
+          <div className="mx-auto my-10 h-[320px] w-[320px] overflow-hidden rounded-3xl md:mx-0  lg:h-[500px] lg:w-[500px]">
             <Lottie
               animationData={AppAnimation}
               loop={true}
@@ -63,36 +63,68 @@ const PanelItem: { title: string; body: string }[] = [
 ];
 
 export const WorkFlowPanel = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [isHover, setIsHover] = useState(false);
 
   return (
-    <div>
+    <>
       {PanelItem.map((el, index) => (
-        <div
+        <PanelChild
           key={index}
-          className={`my-2 rounded-xl border-2 border-transparent hover:border-2 hover:border-primary ${
-            index === activeIndex && "hover:border-transparent"
-          }`}
-        >
-          <div
-            key={index}
-            onClick={() => setActiveIndex(index)}
-            className={`max-h-24 overflow-hidden rounded-xl px-6 py-4 text-center transition-[max-height] duration-500 ease-in-out ${
-              index === activeIndex
-                ? "max-h-48 bg-primary text-white"
-                : " bg-white"
-            }`}
-          >
-            <h3>0{index + 1}</h3>
-            <h4
-              className={index === activeIndex ? "text-white" : "text-primary"}
-            >
-              {el.title}
-            </h4>
-            {index === activeIndex && <h5 className={`pt-4`}>{el.body}</h5>}
+          title={el.title}
+          body={el.body}
+          index={index}
+          defaultOpen={isHover === false && index === 0}
+          setIsHover={setIsHover}
+        ></PanelChild>
+      ))}
+    </>
+  );
+};
+
+export const PanelChild = ({
+  title,
+  body,
+  index,
+  defaultOpen,
+  setIsHover,
+}: {
+  title: string;
+  body: string;
+  index: number;
+  defaultOpen: boolean;
+  setIsHover: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+  return (
+    <>
+      {defaultOpen ? (
+        <div className="py-2">
+          <div className="group flex h-48 max-h-48 cursor-pointer flex-col justify-between rounded-xl bg-primary px-6 py-4 transition-all duration-500 lg:h-40">
+            <div className={`text-center`}>
+              <h3 className=" text-white">0{index + 1}</h3>
+              <h4 className="text-white">{title}</h4>
+              <h5 className={`pt-4 text-white`}>{body}</h5>
+            </div>
           </div>
         </div>
-      ))}
-    </div>
+      ) : (
+        <div
+          className="py-2"
+          onMouseEnter={() => setIsHover(true)}
+          onMouseLeave={() => setIsHover(false)}
+        >
+          <div className="group flex h-24 max-h-48 cursor-pointer flex-col justify-between rounded-xl bg-white px-6 py-4 transition-all duration-500 hover:h-48 hover:bg-primary hover:lg:h-40">
+            <div className={`text-center`}>
+              <h3 className="text-primary group-hover:text-white">
+                0{index + 1}
+              </h3>
+              <h4 className="text-primary group-hover:text-white">{title}</h4>
+              <h5 className={`hidden pt-4 text-white group-hover:block `}>
+                {body}
+              </h5>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
