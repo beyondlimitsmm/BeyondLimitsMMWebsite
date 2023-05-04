@@ -98,7 +98,7 @@ export const PanelChild = ({
     <>
       {defaultOpen ? (
         <div className="py-2">
-          <div className="group flex h-48 max-h-48 cursor-pointer flex-col justify-between rounded-xl bg-primary px-6 py-4 transition-all duration-500 lg:h-40">
+          <div className="group flex h-52 max-h-52 flex-col justify-between rounded-xl bg-primary px-6 py-4 transition-all duration-500 lg:h-40">
             <div className={`text-center`}>
               <h3 className=" text-white">0{index + 1}</h3>
               <h4 className="text-white">{title}</h4>
@@ -112,13 +112,15 @@ export const PanelChild = ({
           onMouseEnter={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
         >
-          <div className="group flex h-24 max-h-48 cursor-pointer flex-col justify-between rounded-xl bg-white px-6 py-4 transition-all duration-500 hover:h-48 hover:bg-primary hover:lg:h-40">
+          <div className="group flex h-24 max-h-52 flex-col justify-between rounded-xl bg-white px-6 py-4 transition-all duration-500 hover:h-52 hover:bg-primary hover:lg:h-40">
             <div className={`text-center`}>
               <h3 className="text-primary group-hover:text-white">
                 0{index + 1}
               </h3>
               <h4 className="text-primary group-hover:text-white">{title}</h4>
-              <h5 className={`hidden pt-4 text-white group-hover:block `}>
+              <h5
+                className={`hidden select-none pt-4 text-white group-hover:block`}
+              >
                 {body}
               </h5>
             </div>
