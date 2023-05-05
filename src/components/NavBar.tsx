@@ -63,29 +63,37 @@ export const NavBar = () => {
     }
   };
 
+  const handleWindowResize = () => {
+    if (window.innerWidth > 720) {
+      setOpenNavBar(false);
+    }
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", handleMenuOnScroll);
+    window.addEventListener("resize", handleWindowResize);
 
     return () => {
       window.removeEventListener("scroll", handleMenuOnScroll);
+      window.removeEventListener("resize", handleWindowResize);
     };
   }, []);
 
   return (
     <div className="navbar-area bg-white shadow-md">
-      <div className="container relative flex h-full items-center ">
+      <div className="relative flex h-full w-full items-center">
         <MobileSlideInNav
           open={openNavBar}
           setOpenNavBar={setOpenNavBar}
         ></MobileSlideInNav>
         {openNavBar && (
           <div
-            className=" absolute right-0 left-0 top-full bottom-0 h-screen w-screen bg-black opacity-25"
+            className="absolute right-0 left-0 top-full bottom-0 h-screen w-screen bg-black opacity-25 md:hidden"
             onClick={() => setOpenNavBar(false)}
           ></div>
         )}
 
-        <nav className="navbar navbar-expand-lg z-20 flex h-full w-full items-center  justify-between">
+        <nav className="navbar navbar-expand-lg container z-20 flex h-full w-full items-center  justify-between">
           <img
             src={Logo}
             alt=""
@@ -93,7 +101,6 @@ export const NavBar = () => {
             height={32}
             className="overflow-hidden rounded-lg"
           />
-
           <div
             className={`mt-full absolute left-0 top-full z-20 hidden h-full w-full bg-white px-5 md:static md:block`}
             id="navbarOne"
@@ -126,7 +133,6 @@ export const NavBar = () => {
                   Services
                 </a>
               </li>
-
               <li className="nav-item ml-5 flex h-full items-center lg:ml-11">
                 <a
                   className="page-scroll flex h-full items-center"
@@ -161,7 +167,6 @@ export const NavBar = () => {
               </li>
             </ul>
           </div>
-
           <button
             onClick={() => {
               setOpenNavBar(!openNavBar);
@@ -204,8 +209,8 @@ export const MobileSlideInNav = ({
   }
 
   return (
-    <div className={`${open ? "block" : "hidden"} `}>
-      <div className="absolute top-full right-0 left-0 z-20 w-full bg-white opacity-100">
+    <div className={`${open ? "block" : "hidden"}`}>
+      <div className="absolute top-full right-0 left-0 z-20 w-full bg-white opacity-100 md:hidden md:h-0 md:w-0">
         <li
           className="link-menu active-mobile h-10 leading-10"
           onClick={handleClick}

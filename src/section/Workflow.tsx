@@ -19,11 +19,11 @@ export const Workflow = () => {
           <h1 className="text-primaryDarkBlue">
             Development Process & Methodology
           </h1>
-          <div className="mx-auto my-10 h-[320px] w-[320px] overflow-hidden rounded-3xl md:mx-0  lg:h-[500px] lg:w-[500px]">
+          <div className="mx-auto my-10 h-[320px] w-[320px] overflow-hidden rounded-3xl md:mx-0  lg:h-[400px] lg:w-[400px] xl:h-[500px] xl:w-[500px]">
             <Lottie
               animationData={AppAnimation}
               loop={true}
-              className="h-[320px] w-[320px] rounded-3xl bg-white lg:h-[500px] lg:w-[500px]"
+              className="h-[320px] w-[320px] rounded-3xl bg-white lg:h-[400px] lg:w-[400px] xl:h-[500px] xl:w-[500px]"
             />
           </div>
         </div>
@@ -98,7 +98,7 @@ export const PanelChild = ({
     <>
       {defaultOpen ? (
         <div className="py-2">
-          <div className="group flex h-52 max-h-52 flex-col justify-between rounded-xl bg-primary px-6 py-4 transition-all duration-500 lg:h-40">
+          <div className="group flex h-52 max-h-52 flex-col justify-between rounded-xl bg-primary px-6 py-4 transition-all duration-500 lg:h-44 xl:h-40">
             <div className={`text-center`}>
               <h3 className=" text-white">0{index + 1}</h3>
               <h4 className="text-white">{title}</h4>
@@ -111,8 +111,9 @@ export const PanelChild = ({
           className="py-2"
           onMouseEnter={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
+          onClick={() => setIsHover(true)}
         >
-          <div className="group flex h-24 max-h-52 flex-col justify-between rounded-xl bg-white px-6 py-4 transition-all duration-500 hover:h-52 hover:bg-primary hover:lg:h-40">
+          <div className="group flex h-24 max-h-48 flex-col justify-between rounded-xl bg-white px-6 py-4 transition-all duration-500 hover:h-48 hover:bg-primary hover:lg:h-44 hover:xl:h-40">
             <div className={`text-center`}>
               <h3 className="text-primary group-hover:text-white">
                 0{index + 1}
