@@ -5,6 +5,7 @@ import Contact1 from "../assets/layers/contact-1.svg";
 export const ContactSection = () => {
   return (
     <section
+      data-section
       id="contactUs"
       className="container flex flex-col items-center justify-between gap-6 py-10 lg:flex-row "
     >

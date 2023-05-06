@@ -3,6 +3,7 @@ import WhyChooseUs1 from "../assets/layers/whychooseus-1.svg";
 export const WhyChooseUs = () => {
   return (
     <section
+      data-section
       id="whyUs"
       className="relative scroll-m-16 overflow-hidden bg-[#F6F9FF] py-10 lg:py-20"
     >

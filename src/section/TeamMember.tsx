@@ -151,6 +151,7 @@ const TeamMemberList: Array<ITeamMemberCard> = [
 export const OurTeam = () => {
   return (
     <section
+      data-section
       id="team"
       className="OurTeam relative scroll-m-16 overflow-hidden bg-primary pb-14 pt-10 text-white md:py-20"
     >

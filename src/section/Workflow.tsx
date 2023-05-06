@@ -6,6 +6,7 @@ import AppAnimation from "../assets/lottie/app-animation.json";
 export const Workflow = () => {
   return (
     <section
+      data-section
       id="process"
       className="relative h-auto scroll-m-16 overflow-y-hidden bg-[#F6F9FF] py-10 lg:h-[900px] lg:py-20"
     >

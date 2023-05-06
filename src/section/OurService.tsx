@@ -15,7 +15,7 @@ export const OurService = () => {
   };
 
   return (
-    <section id="services" className="OurService pt-10">
+    <section data-section id="services" className="OurService pt-10">
       <div className="bg-primary py-8">
         <div className="container flex flex-col items-start gap-6 text-white md:items-center lg:flex-row lg:gap-14">
           <h1 className="lg:w-1/2">

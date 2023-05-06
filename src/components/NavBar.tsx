@@ -1,91 +1,48 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Logo from "/tab_logo.png";
 
 export const NavBar = () => {
   const [openNavBar, setOpenNavBar] = useState(false);
-
-  const handleMenuOnScroll = () => {
-    const maxScrollableHeight =
-      document.documentElement.scrollHeight - window.innerHeight;
-    const sections = document.querySelectorAll(".page-scroll");
-    const scrollPos =
-      window.pageYOffset ||
-      document.documentElement.scrollTop ||
-      document.body.scrollTop;
-
-    const mobileSections = document.querySelectorAll(".link-menu");
-    for (let i = 0; i < mobileSections.length; i++) {
-      const currLink = mobileSections[i] as HTMLElement;
-      const val = currLink.firstElementChild?.getAttribute("href");
-      const refElement = document.querySelector(val!) as HTMLElement;
-      const scrollTopMinus = scrollPos + 64;
-
-      if (Math.round(scrollPos) === maxScrollableHeight) {
-        document.querySelector(".link-menu")?.classList.remove("active-mobile");
-        mobileSections[mobileSections.length - 2].classList.remove(
-          "active-mobile"
-        );
-        mobileSections[mobileSections.length - 1].classList.add(
-          "active-mobile"
-        );
-      } else if (
-        refElement &&
-        refElement.offsetTop <= scrollTopMinus &&
-        refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
-      ) {
-        document.querySelector(".link-menu")?.classList.remove("active-mobile");
-        currLink.classList.add("active-mobile");
-      } else {
-        currLink.classList.remove("active-mobile");
-      }
-    }
-
-    for (let i = 0; i < sections.length; i++) {
-      const currLink = sections[i] as HTMLElement;
-      const val = currLink.getAttribute("href");
-      const refElement = document.querySelector(val!) as HTMLElement;
-      const scrollTopMinus = scrollPos + 64;
-
-      if (Math.round(scrollPos) === maxScrollableHeight) {
-        document.querySelector(".page-scroll")?.classList.remove("active");
-        sections[sections.length - 2].classList.remove("active");
-        sections[sections.length - 1].classList.add("active");
-      } else if (
-        refElement &&
-        refElement.offsetTop <= scrollTopMinus &&
-        refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
-      ) {
-        document.querySelector(".page-scroll")?.classList.remove("active");
-        currLink.classList.add("active");
-      } else {
-        currLink.classList.remove("active");
-      }
-    }
-  };
-
-  const handleWindowResize = () => {
-    if (window.innerWidth > 720) {
-      setOpenNavBar(false);
-    }
-  };
+  const [activeSection, setActiveSection] = useState("home");
+  const observer = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleMenuOnScroll);
-    window.addEventListener("resize", handleWindowResize);
+    observer.current = new IntersectionObserver(
+      (entries) => {
+        const visibleSection = entries.find(
+          (entry) => entry.isIntersecting
+        )?.target;
+        if (visibleSection) {
+          setActiveSection(visibleSection.id);
+        }
+      },
+      { threshold: 0.5 }
+    );
+    const sections = document.querySelectorAll<HTMLElement>("[data-section]");
+    sections.forEach((section) => {
+      observer.current?.observe(section);
+    });
 
+    const handleWindowResize = () => {
+      setOpenNavBar(false);
+    };
+    window.addEventListener("resize", handleWindowResize);
     return () => {
-      window.removeEventListener("scroll", handleMenuOnScroll);
       window.removeEventListener("resize", handleWindowResize);
+      observer.current?.disconnect();
     };
   }, []);
 
   return (
     <div className="navbar-area bg-white shadow-md">
       <div className="relative flex h-full w-full items-center">
-        <MobileSlideInNav
-          open={openNavBar}
-          setOpenNavBar={setOpenNavBar}
-        ></MobileSlideInNav>
+        {openNavBar && (
+          <MobileSlideInNav
+            activeSection={activeSection}
+            open={openNavBar}
+            setOpenNavBar={setOpenNavBar}
+          ></MobileSlideInNav>
+        )}
         {openNavBar && (
           <div
             className="absolute right-0 left-0 top-full bottom-0 h-screen w-screen bg-black opacity-25 md:hidden"
@@ -111,7 +68,9 @@ export const NavBar = () => {
             >
               <li className="nav-item ml-5 flex h-full items-center lg:ml-11">
                 <a
-                  className="page-scroll active flex h-full items-center"
+                  className={`page-scroll ${
+                    activeSection === "home" ? "active" : ""
+                  } flex h-full items-center`}
                   href="#home"
                 >
                   Home
@@ -119,7 +78,9 @@ export const NavBar = () => {
               </li>
               <li className="nav-item ml-5 flex h-full items-center lg:ml-11">
                 <a
-                  className="page-scroll flex h-full items-center"
+                  className={`page-scroll ${
+                    activeSection === "aboutUs" ? "active" : ""
+                  } flex h-full items-center`}
                   href="#aboutUs"
                 >
                   About Us
@@ -127,7 +88,9 @@ export const NavBar = () => {
               </li>
               <li className="nav-item ml-5 flex h-full items-center lg:ml-11">
                 <a
-                  className="page-scroll flex h-full items-center"
+                  className={`page-scroll ${
+                    activeSection === "services" ? "active" : ""
+                  } flex h-full items-center`}
                   href="#services"
                 >
                   Services
@@ -135,7 +98,9 @@ export const NavBar = () => {
               </li>
               <li className="nav-item ml-5 flex h-full items-center lg:ml-11">
                 <a
-                  className="page-scroll flex h-full items-center"
+                  className={`page-scroll ${
+                    activeSection === "process" ? "active" : ""
+                  } flex h-full items-center`}
                   href="#process"
                 >
                   Process
@@ -143,7 +108,9 @@ export const NavBar = () => {
               </li>
               <li className="nav-item ml-5 flex h-full items-center lg:ml-11">
                 <a
-                  className="page-scroll flex h-full items-center"
+                  className={`page-scroll ${
+                    activeSection === "team" ? "active" : ""
+                  } flex h-full items-center`}
                   href="#team"
                 >
                   Team
@@ -151,7 +118,9 @@ export const NavBar = () => {
               </li>
               <li className="nav-item ml-5 flex h-full items-center lg:ml-11">
                 <a
-                  className="page-scroll flex h-full items-center"
+                  className={`page-scroll ${
+                    activeSection === "whyUs" ? "active" : ""
+                  } flex h-full items-center`}
                   href="#whyUs"
                 >
                   Why Us
@@ -159,7 +128,9 @@ export const NavBar = () => {
               </li>
               <li className="nav-item ml-5 flex h-full items-center lg:ml-11">
                 <a
-                  className="page-scroll flex h-full items-center"
+                  className={`page-scroll ${
+                    activeSection === "contactUs" ? "active" : ""
+                  } flex h-full items-center`}
                   href="#contactUs"
                 >
                   Contact Us
@@ -193,8 +164,10 @@ export const NavBar = () => {
 
 export const MobileSlideInNav = ({
   open,
+  activeSection,
   setOpenNavBar,
 }: {
+  activeSection: string;
   open: boolean;
   setOpenNavBar: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
@@ -212,39 +185,71 @@ export const MobileSlideInNav = ({
     <div className={`${open ? "block" : "hidden"}`}>
       <div className="absolute top-full right-0 left-0 z-20 w-full bg-white opacity-100 md:hidden md:h-0 md:w-0">
         <li
-          className="link-menu active-mobile h-10 leading-10"
+          className={`link-menu ${
+            activeSection === "home" ? "active-mobile" : ""
+          } h-10 leading-10`}
           onClick={handleClick}
         >
           <a className="block h-full w-full pl-6 " href="#home">
             Home
           </a>
         </li>
-        <li onClick={handleClick} className="link-menu h-10 leading-10">
+        <li
+          onClick={handleClick}
+          className={`link-menu ${
+            activeSection === "aboutUs" ? "active-mobile" : ""
+          } h-10 leading-10`}
+        >
           <a className="block h-full w-full pl-6" href="#aboutUs">
             About Us
           </a>
         </li>
-        <li onClick={handleClick} className="link-menu h-10 leading-10">
+        <li
+          onClick={handleClick}
+          className={`link-menu ${
+            activeSection === "services" ? "active-mobile" : ""
+          } h-10 leading-10`}
+        >
           <a className="block h-full w-full pl-6" href="#services">
             Services
           </a>
         </li>
-        <li onClick={handleClick} className="link-menu h-10 leading-10">
+        <li
+          onClick={handleClick}
+          className={`link-menu ${
+            activeSection === "process" ? "active-mobile" : ""
+          } h-10 leading-10`}
+        >
           <a className="block h-full w-full pl-6" href="#process">
             Process
           </a>
         </li>
-        <li onClick={handleClick} className="link-menu h-10 leading-10">
+        <li
+          onClick={handleClick}
+          className={`link-menu ${
+            activeSection === "team" ? "active-mobile" : ""
+          } h-10 leading-10`}
+        >
           <a className="block h-full w-full pl-6" href="#team">
             Team
           </a>
         </li>
-        <li onClick={handleClick} className="link-menu h-10 leading-10">
+        <li
+          onClick={handleClick}
+          className={`link-menu ${
+            activeSection === "whyUs" ? "active-mobile" : ""
+          } h-10 leading-10`}
+        >
           <a className="block h-full w-full pl-6" href="#whyUs">
             Why Us
           </a>
         </li>
-        <li onClick={handleClick} className="link-menu h-10 leading-10">
+        <li
+          onClick={handleClick}
+          className={`link-menu ${
+            activeSection === "contactUs" ? "active-mobile" : ""
+          } h-10 leading-10`}
+        >
           <a className="block h-full w-full pl-6" href="#contactUs">
             Contact Us
           </a>

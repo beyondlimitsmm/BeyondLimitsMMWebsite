@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export const AboutUs = () => {
   return (
-    <section className="AboutUs py-10 md:py-20" id="aboutUs">
+    <section data-section className="AboutUs py-10 md:py-20" id="aboutUs">
       <motion.div
         className="container"
         initial={{ opacity: 0 }}
