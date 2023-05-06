@@ -177,12 +177,12 @@ export const OurTeam = () => {
         <div className="team-wrapper relative">
           <Splide
             options={{
-              rewind: true,
               perPage: 3,
               gap: 24,
-              arrows: false,
+              rewind: true,
+              autoplay: true,
+              interval: 5000,
               pagination: true,
-
               breakpoints: {
                 540: {
                   perPage: 1,
@@ -205,6 +205,8 @@ export const OurTeam = () => {
                 <OurTeamCard {...el}></OurTeamCard>{" "}
               </SplideSlide>
             ))}
+
+            {/* <div className="splide__arrows" /> */}
           </Splide>
         </div>
       </div>

@@ -89,3 +89,15 @@ li {
   transform: scale(1) !important;
   border: 2px solid #91d5ff;
 }
+.splide__arrow {
+  background-color: transparent;
+  top: 30%;
+}
+
+/* .splide__arrow--prev {
+  left: -2em !important;
+}
+
+.splide__arrow--next {
+  right: -2em !important;
+} */

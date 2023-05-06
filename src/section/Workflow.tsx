@@ -63,7 +63,7 @@ const PanelItem: { title: string; body: string }[] = [
 ];
 
 export const WorkFlowPanel = () => {
-  const [isHover, setIsHover] = useState(false);
+  const [hoverIndex, setHoverIndex] = useState(0);
 
   return (
     <>
@@ -73,8 +73,8 @@ export const WorkFlowPanel = () => {
           title={el.title}
           body={el.body}
           index={index}
-          defaultOpen={isHover === false && index === 0}
-          setIsHover={setIsHover}
+          hoverIndex={hoverIndex}
+          setHoverIndex={setHoverIndex}
         ></PanelChild>
       ))}
     </>
@@ -85,20 +85,20 @@ export const PanelChild = ({
   title,
   body,
   index,
-  defaultOpen,
-  setIsHover,
+  hoverIndex,
+  setHoverIndex,
 }: {
   title: string;
   body: string;
   index: number;
-  defaultOpen: boolean;
-  setIsHover: React.Dispatch<React.SetStateAction<boolean>>;
+  hoverIndex: number;
+  setHoverIndex: React.Dispatch<React.SetStateAction<number>>;
 }) => {
   return (
     <>
-      {defaultOpen ? (
+      {index === hoverIndex ? (
         <div className="py-2">
-          <div className="group flex h-52 max-h-52 flex-col justify-between rounded-xl bg-primary px-6 py-4 transition-all duration-500 lg:h-44 xl:h-40">
+          <div className="group flex h-48 max-h-52 flex-col justify-between rounded-xl bg-primary px-6 py-4 transition-all duration-500 sm:h-44 md:h-48 lg:h-44 xl:h-40">
             <div className={`text-center`}>
               <h3 className=" text-white">0{index + 1}</h3>
               <h4 className="text-white">{title}</h4>
@@ -109,11 +109,11 @@ export const PanelChild = ({
       ) : (
         <div
           className="py-2"
-          onMouseEnter={() => setIsHover(true)}
-          onMouseLeave={() => setIsHover(false)}
-          onClick={() => setIsHover(true)}
+          onMouseEnter={() => setHoverIndex(index)}
+          onMouseLeave={() => setHoverIndex(index)}
+          onClick={() => setHoverIndex(index)}
         >
-          <div className="group flex h-24 max-h-48 flex-col justify-between rounded-xl bg-white px-6 py-4 transition-all duration-500 hover:h-48 hover:bg-primary hover:lg:h-44 hover:xl:h-40">
+          <div className="group flex h-24 max-h-48 flex-col justify-between rounded-xl bg-white px-6 py-4 transition-all duration-500 hover:h-48 hover:bg-primary hover:sm:h-40 hover:lg:h-44 hover:xl:h-40">
             <div className={`text-center`}>
               <h3 className="text-primary group-hover:text-white">
                 0{index + 1}
