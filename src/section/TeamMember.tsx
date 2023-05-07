@@ -165,13 +165,17 @@ export const OurTeam = () => {
           </div>
         </div>
         <img
+          width={320}
+          height={416}
           src={TeamMember1}
-          alt=""
+          alt="svg shapes"
           className="absolute -bottom-28 -left-20 scale-50 md:bottom-0  md:left-0 md:scale-100"
         />
         <img
+          width={208}
+          height={360}
           src={TeamMember2}
-          alt=""
+          alt="svg shapes"
           className="absolute -right-24 -top-32 scale-50 md:right-0  md:top-0 md:scale-100"
         />
 
@@ -227,8 +231,10 @@ const OurTeamCard = ({
       <div className="flex flex-col justify-center">
         <div className="mb-2 flex items-center justify-center rounded-3xl bg-white py-8">
           <img
+            height={124}
+            width={124}
             src={profileUrl}
-            alt=""
+            alt={`Profile for ${name}`}
             className="h-[124px] w-[124px]  rounded-full md:h-[160px] md:w-[160px]"
           />
         </div>

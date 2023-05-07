@@ -16,7 +16,7 @@ export const Footer = () => {
           <div className="mb-4 flex items-center">
             <img
               src={Logo}
-              alt=""
+              alt="Company Logo"
               width={32}
               height={32}
               className="overflow-hidden rounded-lg"
@@ -109,16 +109,18 @@ export const Footer = () => {
 
         <div className="hidden justify-end gap-3 lg:flex">
           <SocialCircle
+            title="LinkedIn"
             icon={<FiLinkedin size={20} />}
             link="https://www.linkedin.com/company/beyond-limits-technologies-myanmar/"
           ></SocialCircle>
           <SocialCircle
+            title="Facebook"
             icon={<FiFacebook size={20} />}
             customStyle="bg-primary text-white border-primary"
             link="https://www.facebook.com/beyondlimitsmm"
           ></SocialCircle>
-          <SocialCircle icon={<FiInstagram size={20} />} link=""></SocialCircle>
-          <SocialCircle icon={<FiGithub size={20} />} link=""></SocialCircle>
+          {/* <SocialCircle icon={<FiInstagram size={20} />} link=""></SocialCircle>
+          <SocialCircle icon={<FiGithub size={20} />} link=""></SocialCircle> */}
         </div>
       </div>
       <div className="my-4 border-b border-[#E2E8F0]"></div>
@@ -126,16 +128,18 @@ export const Footer = () => {
         <div>© Copyright 2023, All Rights Reserved by Beyond Limits</div>
         <div className="flex gap-3 lg:hidden">
           <SocialCircle
+            title="LinkedIn"
             icon={<FiLinkedin size={20} />}
             link="https://www.linkedin.com/company/beyond-limits-technologies-myanmar/"
           ></SocialCircle>
           <SocialCircle
+            title="Facebook"
             icon={<FiFacebook size={20} />}
             customStyle="bg-primary text-white border-primary"
             link="https://www.facebook.com/beyondlimitsmm"
           ></SocialCircle>
-          <SocialCircle icon={<FiInstagram size={20} />} link=""></SocialCircle>
-          <SocialCircle icon={<FiGithub size={20} />} link=""></SocialCircle>
+          {/* <SocialCircle icon={<FiInstagram size={20} />} link=""></SocialCircle>
+          <SocialCircle icon={<FiGithub size={20} />} link=""></SocialCircle> */}
         </div>
       </div>
     </footer>
@@ -146,10 +150,12 @@ export const SocialCircle = ({
   icon,
   link,
   customStyle,
+  title,
 }: {
   icon: React.ReactNode;
   link: string;
   customStyle?: string;
+  title: string;
 }) => {
   return (
     <div
@@ -157,7 +163,7 @@ export const SocialCircle = ({
         customStyle === undefined ? " border-text-secondary45" : customStyle
       }`}
     >
-      <a href={link} target="_blank" className="">
+      <a href={link} target="_blank" className="" aria-label={title}>
         {icon}
       </a>
     </div>

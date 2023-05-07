@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import LogoText from "../assets/Company_text.png";
 import Logo from "/tab_logo.png";
 
 export const NavBar = () => {
@@ -45,19 +46,28 @@ export const NavBar = () => {
         )}
         {openNavBar && (
           <div
-            className="absolute right-0 left-0 top-full bottom-0 h-screen w-screen bg-black opacity-25 md:hidden"
+            className="absolute bottom-0 left-0 right-0 top-full h-screen w-screen bg-black opacity-25 md:hidden"
             onClick={() => setOpenNavBar(false)}
           ></div>
         )}
 
         <nav className="navbar navbar-expand-lg container z-20 flex h-full w-full items-center  justify-between">
-          <img
-            src={Logo}
-            alt=""
-            width={32}
-            height={32}
-            className="overflow-hidden rounded-lg"
-          />
+          <div className="flex">
+            <img
+              src={Logo}
+              alt="Company Logo"
+              width={36}
+              height={36}
+              className="mr-4 min-h-[2.5rem] min-w-[2.5rem] overflow-hidden rounded-lg"
+            />
+            <img
+              src={LogoText}
+              alt="Beyond Limit"
+              width={100}
+              height={42}
+              className="block min-w-[6rem] md:hidden xl:block "
+            />
+          </div>
           <div
             className={`mt-full absolute left-0 top-full z-20 hidden h-full w-full bg-white px-5 md:static md:block`}
             id="navbarOne"
@@ -183,7 +193,7 @@ export const MobileSlideInNav = ({
 
   return (
     <div className={`${open ? "block" : "hidden"}`}>
-      <div className="absolute top-full right-0 left-0 z-20 w-full bg-white opacity-100 md:hidden md:h-0 md:w-0">
+      <div className="absolute left-0 right-0 top-full z-20 w-full bg-white opacity-100 md:hidden md:h-0 md:w-0">
         <li
           className={`link-menu ${
             activeSection === "home" ? "active-mobile" : ""

@@ -11,8 +11,10 @@ export const Workflow = () => {
       className="relative h-auto scroll-m-16 overflow-y-hidden bg-[#F6F9FF] py-10 lg:h-[900px] lg:py-20"
     >
       <img
+        width={427}
+        height={465}
         src={Workflow1}
-        alt=""
+        alt="svg shapes"
         className="absolute -left-20 -top-20 scale-75  lg:left-0 lg:top-0 lg:scale-100 "
       />
       <div className="container z-10 flex flex-col md:flex-row">

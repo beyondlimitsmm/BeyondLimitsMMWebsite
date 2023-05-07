@@ -11,8 +11,20 @@ export const HeroSection = () => {
       className="HeroSection relative py-10 md:pb-20 md:pt-32"
     >
       <div className="absolute -right-28 top-36 -z-10 scale-75 md:-top-10 lg:right-0 lg:top-0 lg:scale-100">
-        <img src={Hero1} alt="" className="" />
-        <img src={Hero2} alt="" className="absolute bottom-20 right-0" />
+        <img
+          width={498}
+          height={625}
+          src={Hero1}
+          alt="svg shapes"
+          className=""
+        />
+        <img
+          src={Hero2}
+          width={286}
+          height={356}
+          alt="svg shapes"
+          className="absolute bottom-20 right-0"
+        />
       </div>
 
       <div className="container flex flex-col-reverse items-center justify-between md:flex-row">
@@ -42,9 +54,9 @@ export const HeroSection = () => {
             for our clients.
           </h5>
 
-          <button className="rounded-xl bg-primary6 px-4 py-2 text-white">
+          {/* <button className="rounded-xl bg-primary6 px-4 py-2 text-white">
             Learn More
-          </button>
+          </button> */}
         </div>
         <div className="lg:mr-14">
           <div className="h-[320px] w-[320px] overflow-hidden rounded-3xl md:h-[336px]  md:w-[336px] lg:h-[500px] lg:w-[500px] ">

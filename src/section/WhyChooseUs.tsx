@@ -8,8 +8,10 @@ export const WhyChooseUs = () => {
       className="relative scroll-m-16 overflow-hidden bg-[#F6F9FF] py-10 lg:py-20"
     >
       <img
+        width={334}
+        height={479}
         src={WhyChooseUs1}
-        alt=""
+        alt="svg shapes"
         className="absolute -right-32 -top-20 scale-50 md:top-20 md:scale-75 lg:-right-10 lg:top-0 lg:scale-100"
       />
 
