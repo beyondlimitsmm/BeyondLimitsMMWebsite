@@ -20,26 +20,24 @@ export const OurService = () => {
   };
 
   return (
-    <section data-section id="services" className="OurService bg-primary pt-10">
-      <div className=" py-8">
-        <div className="container flex flex-col items-start gap-6 text-white md:items-center lg:flex-row lg:gap-14">
-          <h1 className="lg:w-1/2">
-            Transforming Businesses with Cutting-Edge Solutions
-          </h1>
+    <section data-section id="services" className="services bg-primary pt-20 ">
+      <div className="container flex flex-col items-start gap-6 text-white md:items-center lg:flex-row lg:gap-14">
+        <h1 className="lg:w-1/2">
+          Transforming Businesses with Cutting-Edge Solutions
+        </h1>
 
-          <h5 className="font-light lg:w-1/2 lg:max-w-[520px]">
-            At Beyond Limits Technologies, we specialize in a wide range of
-            software development services designed to help your business achieve
-            its full potential.
-          </h5>
-        </div>
+        <h5 className="font-light lg:w-1/2 lg:max-w-[520px]">
+          At Beyond Limits Technologies, we specialize in a wide range of
+          software development services designed to help your business achieve
+          its full potential.
+        </h5>
       </div>
 
       <div
         // initial={variants.hidden}
         // whileInView={variants.visible}
         // viewport={{ once: true }}
-        className="py-8 lg:py-16"
+        className="py-4 lg:py-16"
       >
         <div className="container mb-6">
           <OurServiceCard
@@ -119,28 +117,30 @@ const OurServiceCard = ({
 }) => {
   return (
     <div
-      className={`mb-4 flex flex-col gap-6 rounded-3xl bg-white p-6 lg:mb-12  lg:gap-12 lg:px-10 lg:py-6  ${
+      className={`mb-4 flex flex-col gap-0 rounded-3xl bg-white px-6 pb-6 lg:mb-12 lg:gap-12 lg:px-10 lg:py-6  ${
         reverse ? "lg:flex-row-reverse" : "lg:flex-row"
       }`}
     >
       <div className="flex w-full justify-center">
-        <img src={imagePath} alt="" />
+        <img src={imagePath} alt={title} className="scale-75 lg:scale-100" />
       </div>
       <div
         className={`flex w-full flex-col justify-center ${
           reverse && "lg:ml-6"
         }`}
       >
-        <h2 className="text-header-2">{title}</h2>
+        <h2 className="mb-2 text-xl font-semibold text-header-2 lg:text-[32px] lg:leading-[48px]">
+          {title}
+        </h2>
 
-        <h5 className="my-2 font-medium text-text-secondary45 lg:my-4">
+        <h5 className="my-2 text-sm font-medium text-text-secondary45 lg:my-4 lg:text-base">
           {body}
         </h5>
 
         {bullets.map((bullet, index) => (
           <li
             key={index}
-            className="mb-1 list-disc font-medium text-text-secondary45 marker:text-primary lg:mb-2"
+            className="mb-1 list-disc text-sm font-medium text-text-secondary45 marker:text-primary lg:mb-2 lg:text-base"
           >
             {bullet}
           </li>

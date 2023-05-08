@@ -13,14 +13,14 @@ export const WhyChooseUs = () => {
     <section
       data-section
       id="whyUs"
-      className="container relative scroll-m-16 overflow-hidden bg-white py-10 lg:py-20"
+      className="container relative scroll-m-16 overflow-hidden bg-white pt-10 lg:py-20"
     >
       <h1 className="text-center font-semibold text-text-secondary45">
         Why You Should{" "}
         <span className="text-primary">Choose Beyond Limits</span>
       </h1>
 
-      <div className="mt-12 flex flex-wrap justify-center">
+      <div className="mt-4 flex flex-wrap justify-center lg:mt-12">
         <WhyChooseUsCard
           icon={
             <div className="flex min-h-[2.5rem] min-w-[2.5rem] items-center justify-center rounded-full bg-[#096DD9] text-white">

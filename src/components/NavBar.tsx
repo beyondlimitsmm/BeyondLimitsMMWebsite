@@ -17,7 +17,7 @@ export const NavBar = () => {
           setActiveSection(visibleSection.id);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.2 }
     );
     const sections = document.querySelectorAll<HTMLElement>("[data-section]");
     sections.forEach((section) => {
@@ -35,7 +35,7 @@ export const NavBar = () => {
   }, []);
 
   return (
-    <div className="navbar-area bg-white shadow-md">
+    <div className="navbar-area z-50 bg-white shadow-md">
       <div className="relative flex h-full w-full items-center">
         {openNavBar && (
           <MobileSlideInNav
@@ -86,16 +86,7 @@ export const NavBar = () => {
                   Home
                 </a>
               </li>
-              <li className="nav-item ml-5 flex h-full items-center lg:ml-11">
-                <a
-                  className={`page-scroll ${
-                    activeSection === "aboutUs" ? "active" : ""
-                  } flex h-full items-center`}
-                  href="#aboutUs"
-                >
-                  About Us
-                </a>
-              </li>
+
               <li className="nav-item ml-5 flex h-full items-center lg:ml-11">
                 <a
                   className={`page-scroll ${
@@ -183,6 +174,7 @@ const MobileSlideInNav = ({
 }) => {
   function handleClick(e: React.MouseEvent<HTMLLIElement, MouseEvent>) {
     const sections = document.querySelectorAll(".link-menu");
+
     sections.forEach((el) => {
       el.classList.remove("active-mobile");
     });
@@ -193,7 +185,7 @@ const MobileSlideInNav = ({
 
   return (
     <div className={`${open ? "block" : "hidden"}`}>
-      <div className="absolute left-0 right-0 top-full z-20 w-full bg-white opacity-100 md:hidden md:h-0 md:w-0">
+      <div className="absolute left-0 right-0 top-full z-50 w-full bg-white opacity-100 md:hidden md:h-0 md:w-0">
         <li
           className={`link-menu ${
             activeSection === "home" ? "active-mobile" : ""
@@ -204,16 +196,7 @@ const MobileSlideInNav = ({
             Home
           </a>
         </li>
-        <li
-          onClick={handleClick}
-          className={`link-menu ${
-            activeSection === "aboutUs" ? "active-mobile" : ""
-          } h-10 leading-10`}
-        >
-          <a className="block h-full w-full pl-6" href="#aboutUs">
-            About Us
-          </a>
-        </li>
+
         <li
           onClick={handleClick}
           className={`link-menu ${

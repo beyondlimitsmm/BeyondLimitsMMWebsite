@@ -23,7 +23,7 @@ export const Footer = () => {
             />
             <h4 className="ml-4 text-primary">Beyond Limits</h4>
           </div>
-          <p className="text-base font-medium text-text-secondary45 md:max-w-[300px]">
+          <p className="text-base font-normal text-text-secondary45 md:max-w-[300px]">
             We are top rated Digital Marketing and Software Provider in Myanmar.
           </p>
         </div>
@@ -31,7 +31,7 @@ export const Footer = () => {
         {/* Div 2 */}
         <div className="grid grid-cols-2 justify-items-start md:justify-items-center lg:justify-items-end">
           <div>
-            <h4 className="mb-4 font-bold text-primary">Quick Links</h4>
+            {/* <h4 className="mb-4 font-bold text-primary">Quick Links</h4> */}
 
             <a
               className="group mb-2 block transition-all duration-150 hover:text-primary"
@@ -74,7 +74,7 @@ export const Footer = () => {
             </a>
           </div>
           <div className="">
-            <h4 className="mb-4 font-bold text-primary">Resources</h4>
+            {/* <h4 className="mb-4 font-bold text-primary">Resources</h4> */}
 
             <a
               className="group mb-2 block transition-all duration-150 hover:text-primary"
