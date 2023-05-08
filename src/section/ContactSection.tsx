@@ -1,6 +1,7 @@
 import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 import Map from "../assets/Map.png";
 import Contact1 from "../assets/layers/contact-1.svg";
+import { ICardInfo } from "../data/types";
 
 export const ContactSection = () => {
   return (
@@ -73,13 +74,7 @@ export const ContactSection = () => {
   );
 };
 
-export interface ICardInfo {
-  icon: React.ReactNode;
-  title: string;
-  body: React.ReactNode;
-}
-
-export const ContactInfoChild = ({ icon, title, body }: ICardInfo) => {
+const ContactInfoChild = ({ icon, title, body }: ICardInfo) => {
   return (
     <div className="z-20 flex items-center gap-4 text-white">
       <div className="mb-4">{icon}</div>

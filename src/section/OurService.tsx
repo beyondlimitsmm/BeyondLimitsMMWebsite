@@ -6,7 +6,7 @@ import {
   AiOutlineMobile,
   AiOutlinePicLeft,
 } from "react-icons/ai";
-import { ICardInfo } from "./ContactSection";
+import { ICardInfo } from "../data/types";
 
 export const OurService = () => {
   const variants = {
@@ -72,7 +72,7 @@ export const OurService = () => {
   );
 };
 
-export const OurServiceCard = ({ icon, title, body }: ICardInfo) => {
+const OurServiceCard = ({ icon, title, body }: ICardInfo) => {
   return (
     <div className="flex flex-col items-center rounded-3xl border-[3px] border-[#F5F5F5] p-4 md:px-6 md:py-4">
       <div className="mb-3 flex h-14 w-14 items-center justify-center  rounded-full bg-neutral2 md:mb-6 md:h-20 md:w-20">

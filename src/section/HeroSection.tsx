@@ -63,7 +63,7 @@ export const HeroSection = () => {
             <Lottie
               animationData={MarketAnalysis}
               loop={true}
-              className="h-[320px] w-[320px] rounded-3xl bg-white md:h-[336px]  md:w-[336px] lg:h-[500px] lg:w-[500px] "
+              className="h-[320px] w-[320px] rounded-3xl bg-white md:h-[336px]  md:w-[336px] lg:h-[500px] lg:w-[500px]"
             />
           </div>
         </div>

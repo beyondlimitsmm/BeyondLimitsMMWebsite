@@ -55,13 +55,7 @@ export const WhyChooseUs = () => {
   );
 };
 
-export const WhyChooseUsCard = ({
-  title,
-  body,
-}: {
-  title: string;
-  body: string;
-}) => {
+const WhyChooseUsCard = ({ title, body }: { title: string; body: string }) => {
   return (
     <div className="my-2 flex flex-col items-center justify-center rounded-xl bg-white px-12 py-4">
       <h5 className="mb-4 font-medium text-primary">{title}</h5>

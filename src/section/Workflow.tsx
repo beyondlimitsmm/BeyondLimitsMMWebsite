@@ -2,6 +2,7 @@ import Lottie from "lottie-react";
 import { useState } from "react";
 import Workflow1 from "../assets/layers/wrokflow-1.svg";
 import AppAnimation from "../assets/lottie/app-animation.json";
+import { PanelItem } from "../data/data";
 
 export const Workflow = () => {
   return (
@@ -38,34 +39,7 @@ export const Workflow = () => {
   );
 };
 
-const PanelItem: { title: string; body: string }[] = [
-  {
-    title: "Discovery",
-    body: "We begin by understanding your business goals, requirements, and target audience to create a comprehensive project plan.",
-  },
-  {
-    title: "Design",
-    body: "Our designers create wireframes, mockups, and prototypes to ensure a visually appealing and user-friendly experience.",
-  },
-  {
-    title: "Development",
-    body: "Our developers bring your vision to life by writing clean, efficient, and scalable code using the latest technologies and best practices.",
-  },
-  {
-    title: "Testing",
-    body: "We perform rigorous testing to identify and resolve any issues, ensuring the highest level of quality and reliability ",
-  },
-  {
-    title: "Deployment",
-    body: "We help you launch your solution, providing support and guidance throughout the process.",
-  },
-  {
-    title: "Maintenance & Support",
-    body: "We offer ongoing support and updates to ensure your software stays current and performs optimally.",
-  },
-];
-
-export const WorkFlowPanel = () => {
+const WorkFlowPanel = () => {
   const [hoverIndex, setHoverIndex] = useState(0);
 
   return (
@@ -84,7 +58,7 @@ export const WorkFlowPanel = () => {
   );
 };
 
-export const PanelChild = ({
+const PanelChild = ({
   title,
   body,
   index,

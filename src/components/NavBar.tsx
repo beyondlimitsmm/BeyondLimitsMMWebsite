@@ -172,7 +172,7 @@ export const NavBar = () => {
   );
 };
 
-export const MobileSlideInNav = ({
+const MobileSlideInNav = ({
   open,
   activeSection,
   setOpenNavBar,

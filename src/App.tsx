@@ -19,7 +19,6 @@ function App() {
       <Workflow></Workflow>
       <OurTeam></OurTeam>
       <WhyChooseUs></WhyChooseUs>
-
       <ContactSection></ContactSection>
       <Footer></Footer>
     </div>

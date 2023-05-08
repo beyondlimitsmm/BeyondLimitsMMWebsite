@@ -43,13 +43,7 @@ export const AboutUs = () => {
   );
 };
 
-export const AboutUsCard = ({
-  title,
-  body,
-}: {
-  title: string;
-  body: string;
-}) => {
+const AboutUsCard = ({ title, body }: { title: string; body: string }) => {
   return (
     <div className="min-h-[260px] rounded-2xl bg-neutral2 p-4 ">
       <h4 className="text-primary">{title}</h4>
