@@ -6,6 +6,11 @@ import {
   AiOutlineMobile,
   AiOutlinePicLeft,
 } from "react-icons/ai";
+import cloud from "../assets/services/service-cloud.svg";
+import mobiledevelopment from "../assets/services/service-mobiledevelopment.svg";
+import Saas from "../assets/services/service-saas.svg";
+import uiux from "../assets/services/service-uiux.svg";
+import webdevelopment from "../assets/services/service-webdevelopment.svg";
 import { ICardInfo } from "../data/types";
 
 export const OurService = () => {
@@ -15,8 +20,8 @@ export const OurService = () => {
   };
 
   return (
-    <section data-section id="services" className="OurService pt-10">
-      <div className="bg-primary py-8">
+    <section data-section id="services" className="OurService bg-primary pt-10">
+      <div className=" py-8">
         <div className="container flex flex-col items-start gap-6 text-white md:items-center lg:flex-row lg:gap-14">
           <h1 className="lg:w-1/2">
             Transforming Businesses with Cutting-Edge Solutions
@@ -24,65 +29,123 @@ export const OurService = () => {
 
           <h5 className="font-light lg:w-1/2 lg:max-w-[520px]">
             At Beyond Limits Technologies, we specialize in a wide range of
-            software development servicesdesigned to help your business achieve
-            its full potential. Our expertise, coupled with a deepunderstanding
-            of industry trends and emerging technologies, enables us to create
-            tailoredsolutions that drive success.
+            software development services designed to help your business achieve
+            its full potential.
           </h5>
         </div>
       </div>
 
-      <motion.div
-        initial={variants.hidden}
-        whileInView={variants.visible}
-        viewport={{ once: true }}
-        className="bg-white py-16"
+      <div
+        // initial={variants.hidden}
+        // whileInView={variants.visible}
+        // viewport={{ once: true }}
+        className="py-8 lg:py-16"
       >
-        <div className="container mb-6 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="container mb-6">
           <OurServiceCard
-            icon={<AiOutlineLaptop className="h-8 w-8" />}
-            title="Custom Software Development"
-            body="We develop bespoke software solutions that address your unique business challenges, streamline processes, and maximize efficiency. Our custom software solutions are designed to grow with your business, ensuring long-term success."
-          />
+            imagePath={Saas}
+            title="SAAS"
+            body="We develop bespoke software solutions that address your unique business challenges, streamline processes, and maximize efficiency."
+            bullets={[
+              "Issue printed or electronic receipts",
+              "Apply discounts and issue refunds",
+              "Keep recording sales even when offline",
+              "Connect a receipt printer, barcode scanner, and cash drawer",
+            ]}
+          ></OurServiceCard>
+
           <OurServiceCard
-            icon={<AiOutlineMobile className="h-8 w-8" />}
-            title="Mobile App Development"
-            body="Capture your target audience with engaging, user-friendly mobile applications. Our team has expertise in developing native and cross-platform mobile apps for iOS and Android, ensuring your app stands out in today's competitive market."
-          />
-        </div>
-        <div className="container  grid grid-cols-1 gap-6 md:grid-cols-3">
-          <OurServiceCard
-            icon={<AiOutlinePicLeft className="h-8 w-8" />}
+            reverse
+            imagePath={webdevelopment}
             title="Web Development"
-            body="We create responsive, feature-rich websites that deliver exceptional user experiences. Our expertise includes designing and developing websites using popular technologies and frameworks like HTML5, CSS3, JavaScript, React, Angular, and more."
-          />
+            body="We create responsive, feature-rich websites that deliver exceptional user experiences. We used Following Technologies."
+            bullets={["React", "Typescript", "Animations", "CSS"]}
+          ></OurServiceCard>
+
           <OurServiceCard
-            icon={<AiOutlineBulb className="h-8 w-8" />}
-            title="UX/UI Design"
-            body="Our designers work closely with you to create intuitive, visually appealing userinterfaces that align with your brand identity and resonate with your target audience. Weprioritize usability and accessibility to ensure a seamless user experience across allplatforms."
-          />
+            imagePath={mobiledevelopment}
+            title="Mobile App Development"
+            body="We develop bespoke software solutions that address your unique business challenges, streamline processes, and maximize efficiency."
+            bullets={[
+              "a long established",
+              "more-or-less normal distribution",
+              "Lorem Ipsum as their default model text",
+              "Various versions have evolved",
+            ]}
+          ></OurServiceCard>
+
           <OurServiceCard
-            icon={<AiOutlineCloud className="h-8 w-8" />}
+            reverse
+            imagePath={uiux}
+            title="UI/UX Design"
+            body="Our designers work closely with you to create intuitive, visually appealing useri nterfaces that align with your brand identity and resonate with your target audience."
+            bullets={[
+              "User Research",
+              "Design Thinking Approach",
+              "Lean UX Aprroach",
+              "User Testing",
+            ]}
+          ></OurServiceCard>
+
+          <OurServiceCard
+            imagePath={cloud}
             title="Cloud Solutions"
-            body="We help businesses harness the power of the cloud by designing and implementing scalable, secure, and cost-effective cloud-based solutions. Our expertise includes working with major cloud service providers such as AWS, Google Cloud, and Microsoft Azure."
-          />
+            body="We help businesses harness the power of the cloud by designing and implementing scalable, secure, and cost-effective cloud-based solutions. "
+            bullets={[
+              "a long established",
+              "more-or-less normal distribution",
+              "Lorem Ipsum as their default model text",
+              "Various versions have evolved",
+            ]}
+          ></OurServiceCard>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };
 
-const OurServiceCard = ({ icon, title, body }: ICardInfo) => {
+const OurServiceCard = ({
+  imagePath,
+  title,
+  body,
+  reverse = false,
+  bullets,
+}: {
+  imagePath: string;
+  title: string;
+  body: string;
+  bullets: string[];
+  reverse?: boolean;
+}) => {
   return (
-    <div className="flex flex-col items-center rounded-3xl border-[3px] border-[#F5F5F5] p-4 md:px-6 md:py-4">
-      <div className="mb-3 flex h-14 w-14 items-center justify-center  rounded-full bg-neutral2 md:mb-6 md:h-20 md:w-20">
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary7 text-white md:h-16 md:w-16">
-          {icon}
-        </div>
+    <div
+      className={`mb-4 flex flex-col gap-6 rounded-3xl bg-white p-6 lg:mb-12  lg:gap-12 lg:px-10 lg:py-6  ${
+        reverse ? "lg:flex-row-reverse" : "lg:flex-row"
+      }`}
+    >
+      <div className="flex w-full justify-center">
+        <img src={imagePath} alt="" />
       </div>
+      <div
+        className={`flex w-full flex-col justify-center ${
+          reverse && "lg:ml-6"
+        }`}
+      >
+        <h2 className="text-header-2">{title}</h2>
 
-      <h4 className="mb-4 text-primary">{title}</h4>
-      <h5 className="text-center font-normal">{body}</h5>
+        <h5 className="my-2 font-medium text-text-secondary45 lg:my-4">
+          {body}
+        </h5>
+
+        {bullets.map((bullet, index) => (
+          <li
+            key={index}
+            className="mb-1 list-disc font-medium text-text-secondary45 marker:text-primary lg:mb-2"
+          >
+            {bullet}
+          </li>
+        ))}
+      </div>
     </div>
   );
 };

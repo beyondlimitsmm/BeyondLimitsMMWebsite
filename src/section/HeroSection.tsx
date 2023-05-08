@@ -54,9 +54,12 @@ export const HeroSection = () => {
             for our clients.
           </h5>
 
-          {/* <button className="rounded-xl bg-primary6 px-4 py-2 text-white">
-            Learn More
-          </button> */}
+          <a
+            className="block w-max rounded bg-primary px-4 py-2 text-white"
+            href="#contactUs"
+          >
+            Contact Us
+          </a>
         </div>
         <div className="lg:mr-14">
           <div className="h-[320px] w-[320px] overflow-hidden rounded-3xl md:h-[336px]  md:w-[336px] lg:h-[500px] lg:w-[500px] ">
