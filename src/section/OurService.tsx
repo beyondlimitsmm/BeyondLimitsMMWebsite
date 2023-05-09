@@ -20,7 +20,11 @@ export const OurService = () => {
   };
 
   return (
-    <section data-section id="services" className="services bg-primary pt-20 ">
+    <section
+      data-section
+      id="services"
+      className="services overflow-hidden bg-primary pt-20"
+    >
       <div className="container flex flex-col items-start gap-6 text-white md:items-center lg:flex-row lg:gap-14">
         <h1 className="lg:w-1/2">
           Transforming Businesses with Cutting-Edge Solutions
@@ -33,12 +37,7 @@ export const OurService = () => {
         </h5>
       </div>
 
-      <div
-        // initial={variants.hidden}
-        // whileInView={variants.visible}
-        // viewport={{ once: true }}
-        className="py-4 lg:py-16"
-      >
+      <div className="py-4 lg:py-16">
         <div className="container mb-6">
           <OurServiceCard
             imagePath={Saas}
@@ -116,9 +115,14 @@ const OurServiceCard = ({
   reverse?: boolean;
 }) => {
   return (
-    <div
-      className={`mb-4 flex flex-col gap-0 rounded-3xl bg-white px-6 pb-6 lg:mb-12 lg:gap-12 lg:px-10 lg:py-6  ${
-        reverse ? "lg:flex-row-reverse" : "lg:flex-row"
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      // animate={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
+      viewport={{ once: true }}
+      className={`mb-4 flex flex-col gap-0 rounded-3xl bg-white px-6 pb-6 md:px-10 md:py-6 lg:mb-12 lg:gap-12  ${
+        reverse ? "md:flex-row-reverse" : "md:flex-row"
       }`}
     >
       <div className="flex w-full justify-center">
@@ -126,7 +130,7 @@ const OurServiceCard = ({
       </div>
       <div
         className={`flex w-full flex-col justify-center ${
-          reverse && "lg:ml-6"
+          reverse && "md:ml-6"
         }`}
       >
         <h2 className="mb-2 text-xl font-semibold text-header-2 lg:text-[32px] lg:leading-[48px]">
@@ -146,6 +150,6 @@ const OurServiceCard = ({
           </li>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };

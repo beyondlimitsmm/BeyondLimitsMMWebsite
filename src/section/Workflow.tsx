@@ -1,6 +1,7 @@
 import Lottie from "lottie-react";
 import { useState } from "react";
-import Workflow1 from "../assets/layers/wrokflow-1.svg";
+import dots from "../assets/layers/dots.svg";
+import Workflow1 from "../assets/layers/workflow-1.svg";
 import AppAnimation from "../assets/lottie/app-animation.json";
 import { PanelItem } from "../data/data";
 
@@ -12,23 +13,32 @@ export const Workflow = () => {
       className="relative h-auto scroll-m-16 overflow-y-hidden bg-[#F6F9FF] py-10 lg:h-[900px] lg:py-20"
     >
       <img
-        width={427}
-        height={465}
+        width={150}
+        height={218}
         src={Workflow1}
         alt="svg shapes"
-        className="absolute -left-20 -top-20 scale-75  lg:left-0 lg:top-0 lg:scale-100 "
+        className="absolute -left-10 -top-10 scale-75  lg:left-0 lg:top-0 lg:scale-100 "
       />
       <div className="container z-10 flex flex-col md:flex-row">
         <div className="z-10 md:w-1/2">
           <h1 className="text-primaryDarkBlue">
             Development Process & Methodology
           </h1>
-          <div className="mx-auto my-10 h-[320px] w-[320px] overflow-hidden rounded-3xl md:mx-0  lg:h-[400px] lg:w-[400px] xl:h-[500px] xl:w-[500px]">
-            <Lottie
-              animationData={AppAnimation}
-              loop={true}
-              className="h-[320px] w-[320px] rounded-3xl bg-white lg:h-[400px] lg:w-[400px] xl:h-[500px] xl:w-[500px]"
+
+          <div className="relative">
+            <img
+              src={dots}
+              alt="svg shapes"
+              className="absolute -right-10 -top-16 scale-75 md:scale-90 lg:right-20 lg:-top-14 lg:scale-100"
             />
+
+            <div className="z-20 mx-auto my-10 h-[320px] w-[320px] overflow-hidden  rounded-3xl md:mx-0 lg:h-[400px] lg:w-[400px] xl:h-[500px] xl:w-[500px] ">
+              <Lottie
+                animationData={AppAnimation}
+                loop={true}
+                className="z-40 h-[320px] w-[320px] rounded-3xl bg-white lg:h-[400px] lg:w-[400px] xl:h-[500px] xl:w-[500px]"
+              />
+            </div>
           </div>
         </div>
         <div className="md:w-1/2">

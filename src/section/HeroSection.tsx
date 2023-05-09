@@ -1,6 +1,7 @@
 import Lottie from "lottie-react";
 import Hero1 from "../assets/layers/hero-1.svg";
 import Hero2 from "../assets/layers/hero-2.svg";
+import LandingDots from "../assets/layers/landing-dots.svg";
 import MarketAnalysis from "../assets/lottie/market-analysis.json";
 
 export const HeroSection = () => {
@@ -17,13 +18,6 @@ export const HeroSection = () => {
           src={Hero1}
           alt="svg shapes"
           className=""
-        />
-        <img
-          src={Hero2}
-          width={286}
-          height={356}
-          alt="svg shapes"
-          className="absolute bottom-20 right-0"
         />
       </div>
 
@@ -61,8 +55,15 @@ export const HeroSection = () => {
             Contact Us
           </a>
         </div>
-        <div className="lg:mr-14">
-          <div className="h-[320px] w-[320px] overflow-hidden rounded-3xl md:h-[336px]  md:w-[336px] lg:h-[500px] lg:w-[500px] ">
+        <div className="relative lg:mr-14">
+          <img
+            src={LandingDots}
+            width={152}
+            height={128}
+            alt="svg shapes"
+            className="absolute -top-12 -right-12 z-20 scale-75 md:scale-90 lg:scale-100"
+          />
+          <div className=" z-20 h-[320px] w-[320px] overflow-hidden rounded-3xl md:h-[336px] md:w-[336px] lg:h-[500px] lg:w-[500px]">
             <Lottie
               animationData={MarketAnalysis}
               loop={true}

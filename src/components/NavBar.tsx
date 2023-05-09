@@ -52,20 +52,20 @@ export const NavBar = () => {
         )}
 
         <nav className="navbar navbar-expand-lg container z-20 flex h-full w-full items-center  justify-between">
-          <div className="flex">
+          <div className="flex items-center">
             <img
               src={Logo}
               alt="Company Logo"
               width={36}
               height={36}
-              className="mr-4 min-h-[2.5rem] min-w-[2.5rem] overflow-hidden rounded-lg"
+              className="mr-2 min-h-[2.5rem] min-w-[2.5rem] overflow-hidden rounded"
             />
             <img
               src={LogoText}
               alt="Beyond Limit"
               width={100}
               height={42}
-              className="block min-w-[6rem] md:hidden xl:block "
+              className="mt-[1px] block min-w-[6rem] scale-90"
             />
           </div>
           <div
