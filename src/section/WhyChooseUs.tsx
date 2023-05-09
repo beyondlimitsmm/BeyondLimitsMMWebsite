@@ -16,7 +16,7 @@ export const WhyChooseUs = () => {
     animate: {
       y: 0,
       opacity: 1,
-      transition: { staggerChildren: 0.2, ease: "easeInOut", duration: 0.4 },
+      transition: { staggerChildren: 0.15, ease: "easeInOut", duration: 0.4 },
     },
   };
 
