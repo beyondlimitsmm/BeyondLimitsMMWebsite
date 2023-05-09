@@ -29,10 +29,10 @@ export const Workflow = () => {
             <img
               src={dots}
               alt="svg shapes"
-              className="absolute -right-10 -top-16 scale-75 md:scale-90 lg:right-20 lg:-top-14 lg:scale-100"
+              className="absolute -right-10 -top-16 scale-75 md:right-6 md:scale-90 lg:-top-14 lg:right-20 lg:scale-100"
             />
 
-            <div className="z-20 mx-auto my-10 h-[320px] w-[320px] overflow-hidden  rounded-3xl md:mx-0 lg:h-[400px] lg:w-[400px] xl:h-[500px] xl:w-[500px] ">
+            <div className="z-20 mx-auto my-10 h-[320px] w-[320px] overflow-hidden rounded-3xl md:mx-0 md:mt-20 lg:h-[400px] lg:w-[400px] xl:h-[500px] xl:w-[500px]">
               <Lottie
                 animationData={AppAnimation}
                 loop={true}
