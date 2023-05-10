@@ -61,7 +61,7 @@ export const HeroSection = () => {
             width={152}
             height={128}
             alt="svg shapes"
-            className="absolute -top-12 -right-12 z-20 scale-75 md:scale-90 lg:scale-100"
+            className="absolute -right-12 -top-12 z-20 scale-75 md:scale-90 lg:scale-100"
           />
           <div className=" z-20 h-[320px] w-[320px] overflow-hidden rounded-3xl md:h-[336px] md:w-[336px] lg:h-[500px] lg:w-[500px]">
             <Lottie

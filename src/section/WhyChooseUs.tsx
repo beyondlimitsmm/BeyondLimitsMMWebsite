@@ -35,6 +35,7 @@ export const WhyChooseUs = () => {
         initial="initial"
         whileInView="animate"
         variants={staggerVariants}
+        viewport={{ once: true }}
         className="mt-4 flex flex-wrap justify-center lg:mt-12"
       >
         <WhyChooseUsCard

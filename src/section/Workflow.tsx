@@ -1,9 +1,10 @@
+import { AnimatePresence, animate, motion } from "framer-motion";
 import Lottie from "lottie-react";
 import { useState } from "react";
 import dots from "../assets/layers/dots.svg";
 import Workflow1 from "../assets/layers/workflow-1.svg";
 import AppAnimation from "../assets/lottie/app-animation.json";
-import { PanelItem } from "../data/data";
+import { PanelItem, makeAnimation } from "../data/data";
 
 export const Workflow = () => {
   return (
@@ -82,39 +83,55 @@ const PanelChild = ({
   setHoverIndex: React.Dispatch<React.SetStateAction<number>>;
 }) => {
   return (
-    <>
-      {index === hoverIndex ? (
-        <div className="py-2">
-          <div className="group flex h-48 max-h-52 flex-col justify-between rounded-xl bg-primary px-6 py-4 transition-all duration-500 sm:h-44 md:h-48 lg:h-44 xl:h-40">
-            <div className={`text-center`}>
-              <h3 className=" text-white">0{index + 1}</h3>
-              <h4 className="text-white">{title}</h4>
-              <h5 className={`pt-4 text-white`}>{body}</h5>
-            </div>
-          </div>
+    <div
+      className="py-2"
+      onMouseEnter={() => setHoverIndex(index)}
+      onMouseLeave={() => setHoverIndex(index)}
+      onTouchStart={() => {
+        setHoverIndex(index);
+      }}
+      onClick={() => setHoverIndex(index)}
+    >
+      <div
+        className={`group rounded-xl px-6 py-4 transition-all duration-300 ${
+          hoverIndex === index ? "bg-primary" : "bg-white"
+        }`}
+      >
+        <div className="flex w-full flex-col items-center justify-between ">
+          <h3
+            className={`${
+              hoverIndex === index
+                ? "text-white group-hover:text-white"
+                : "text-primary group-hover:text-primary"
+            }`}
+          >
+            0{index + 1}
+          </h3>
+          <h4
+            className={`${
+              hoverIndex === index
+                ? "text-white group-hover:text-white"
+                : "text-primary group-hover:text-primary"
+            }`}
+          >
+            {title}
+          </h4>
         </div>
-      ) : (
-        <div
-          className="py-2"
-          onMouseEnter={() => setHoverIndex(index)}
-          onMouseLeave={() => setHoverIndex(index)}
-          onClick={() => setHoverIndex(index)}
-        >
-          <div className="group flex h-24 max-h-48 flex-col justify-between rounded-xl bg-white px-6 py-4 transition-all duration-500 hover:h-48 hover:bg-primary hover:sm:h-40 hover:lg:h-44 hover:xl:h-40">
-            <div className={`text-center`}>
-              <h3 className="text-primary group-hover:text-white">
-                0{index + 1}
-              </h3>
-              <h4 className="text-primary group-hover:text-white">{title}</h4>
-              <h5
-                className={`hidden select-none pt-4 text-white group-hover:block`}
-              >
-                {body}
-              </h5>
-            </div>
-          </div>
-        </div>
-      )}
-    </>
+        <AnimatePresence mode="wait">
+          {hoverIndex === index && (
+            <motion.div
+              {...makeAnimation}
+              key="test"
+              className="text-center text-white lg:px-14"
+            >
+              <div className="block h-3"></div>
+              <h5>{body}</h5>
+
+              <div className="block lg:h-2 "></div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </div>
   );
 };

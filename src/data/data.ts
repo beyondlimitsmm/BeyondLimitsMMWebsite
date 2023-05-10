@@ -158,3 +158,35 @@ export const TeamMemberList: Array<ITeamMemberCard> = [
       "A technology enthusiast with a deep understanding of emerging trends",
   },
 ];
+
+export const makeAnimation = {
+  initial: {
+    height: 0,
+    opacity: 0,
+  },
+  animate: {
+    height: "auto",
+    opacity: 1,
+    transition: {
+      height: {
+        duration: 0.4,
+      },
+      opacity: {
+        duration: 0.25,
+        delay: 0.15,
+      },
+    },
+  },
+  exit: {
+    height: 0,
+    opacity: 0,
+    transition: {
+      height: {
+        duration: 0.4,
+      },
+      opacity: {
+        duration: 0.25,
+      },
+    },
+  },
+};

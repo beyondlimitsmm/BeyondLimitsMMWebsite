@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import {
   AiOutlineBulb,
   AiOutlineCloud,
@@ -114,11 +115,13 @@ const OurServiceCard = ({
   bullets: string[];
   reverse?: boolean;
 }) => {
+  const [loading, setLoading] = useState(true);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 100 }}
       // animate={{ opacity: 1, y: 0 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: loading ? 0 : 1, y: loading ? 100 : 0 }}
       transition={{ duration: 0.7 }}
       viewport={{ once: true }}
       className={`mb-4 flex flex-col gap-0 rounded-3xl bg-white px-6 pb-6 md:px-10 md:py-6 lg:mb-12 lg:gap-12  ${
@@ -126,7 +129,21 @@ const OurServiceCard = ({
       }`}
     >
       <div className="flex w-full justify-center">
-        <img src={imagePath} alt={title} className="scale-75 lg:scale-100" />
+        <motion.img
+          initial={{ height: "16rem", opacity: 0 }}
+          animate={{
+            height: loading ? "16rem" : "auto",
+            opacity: loading ? 0 : 1,
+          }}
+          transition={[
+            { height: { delay: 0, duration: 0.4 } },
+            { opacity: { delay: 0.5, duration: 0.4 } },
+          ]}
+          src={imagePath}
+          alt={title}
+          className="scale-75 lg:scale-100"
+          onLoad={() => setLoading(false)}
+        />
       </div>
       <div
         className={`flex w-full flex-col justify-center ${
