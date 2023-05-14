@@ -28,24 +28,24 @@ export const HeroSection = () => {
             <span className="text-primary7"> Digital World</span>
           </h1>
           <h5 className="mb-5 mt-16 font-medium text-text-secondary45 md:my-5">
-            Beyond Limits Technologies specializes in creating
+            Beyond Limits Technologies excels in
             <span className="font-bold text-black">
               {" "}
-              cutting-edge, tailor-made software solutions{" "}
+              crafting custom software solutions that empower businesses{" "}
             </span>
-            that empower businesses to thrive in a rapidly evolving digital
-            landscape. Our team of
+            to succeed in a fast-changing digital world. Our passionate team of
+            experts is driven by
             <span className="font-bold text-black">
               {" "}
-              dedicated professionals{" "}
+              innovation and a commitment{" "}
             </span>
-            combines passion, expertise, and a relentless pursuit of innovation
-            to
+            to delivering outstanding outcomes for our clients. With a focus on
+            excellence,
             <span className="font-bold text-black">
               {" "}
-              deliver exceptional results{" "}
+              we provide tailored software solutions{" "}
             </span>
-            for our clients.
+            that enable businesses to thrive in today's dynamic landscape.
           </h5>
 
           <a

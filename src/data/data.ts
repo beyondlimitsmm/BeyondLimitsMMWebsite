@@ -40,7 +40,7 @@ export const TeamMemberList: Array<ITeamMemberCard> = [
   {
     profileUrl: AungHtetPaing,
     name: "Aung Htet Paing",
-    role: ["Founder"],
+    role: ["CEO (Co-Founder)"],
     socials: {
       twitter: "",
       facebook: "",
@@ -48,12 +48,12 @@ export const TeamMemberList: Array<ITeamMemberCard> = [
       github: "",
     },
     description:
-      "A visionary leader with extensive experience in software development",
+      "With extensive entrepreneurial and management experience, skilled in formulating company strategy and leading teams to achieve goals.",
   },
   {
     profileUrl: KyawZinHtun,
-    name: "Kyaw Zin Htun",
-    role: ["Founder"],
+    name: "Kyaw Zin Tun",
+    role: ["COO (Co-Founder)"],
     socials: {
       twitter: "",
       facebook: "",
@@ -61,20 +61,7 @@ export const TeamMemberList: Array<ITeamMemberCard> = [
       github: "",
     },
     description:
-      "A technology enthusiast with a deep understanding of emerging trends",
-  },
-  {
-    profileUrl: SeintSinsarLwin,
-    name: "Seint Sinsar Lwin",
-    role: ["Product Designer"],
-    socials: {
-      twitter: "",
-      facebook: "",
-      linkedin: "",
-      github: "",
-    },
-    description:
-      "brings a wealth of design experience to Beyond Limits Technologies",
+      "Possesses a solid background in operations management, adept at optimizing business processes and improving work efficiency.",
   },
   {
     profileUrl: YeMyoAung,
@@ -87,12 +74,12 @@ export const TeamMemberList: Array<ITeamMemberCard> = [
       github: "",
     },
     description:
-      "brings a wealth of technical experiences to Beyond Limits Technologies",
+      "Boasting rich technical experience and extensive industry knowledge, excels at leading the technology team in developing innovative software solutions.",
   },
   {
-    profileUrl: ThetOoAung,
-    name: "Thet Oo Aung",
-    role: ["Frontend Developer"],
+    profileUrl: NyanLinSoe,
+    name: "Nyan Lin Soe",
+    role: ["Technical Project Manager"],
     socials: {
       twitter: "",
       facebook: "",
@@ -100,7 +87,20 @@ export const TeamMemberList: Array<ITeamMemberCard> = [
       github: "",
     },
     description:
-      "A technology enthusiast with a deep understanding of emerging trends",
+      "With a technical background and project management experience, proficient in cross-departmental collaboration and resource integration.",
+  },
+  {
+    profileUrl: ThetOoAung,
+    name: "Thet Oo Aung",
+    role: ["Front-end Engineer"],
+    socials: {
+      twitter: "",
+      facebook: "",
+      linkedin: "",
+      github: "",
+    },
+    description:
+      "Possessing outstanding programming skills and a keen insight into user experience, adept at transforming complex design and functionality requirements into elegant, high-performance front-end interfaces.",
   },
 
   {
@@ -114,40 +114,13 @@ export const TeamMemberList: Array<ITeamMemberCard> = [
       github: "",
     },
     description:
-      "brings a wealth of developer  experience to Beyond Limits Technologies",
+      "Proficient in the development of multiple mobile platforms, with extensive experience in cross-platform application development.",
   },
 
-  {
-    profileUrl: NyanLinSoe,
-    name: "Nyan Lin Soe",
-    role: ["Project Manager"],
-    socials: {
-      twitter: "",
-      facebook: "",
-      linkedin: "",
-      github: "",
-    },
-    description:
-      "With exceptional organizational skills and a keen eye for detail",
-  },
-
-  {
-    profileUrl: MinBala,
-    name: "Min Bala",
-    role: ["Backend Developer"],
-    socials: {
-      twitter: "",
-      facebook: "",
-      linkedin: "",
-      github: "",
-    },
-    description:
-      "A visionary developer with extensive experience in software development",
-  },
   {
     profileUrl: WaiYanKyaw,
     name: "Wai Yan Kyaw",
-    role: ["Backend Developer"],
+    role: ["Back-end Developer"],
     socials: {
       twitter: "",
       facebook: "",
@@ -155,7 +128,33 @@ export const TeamMemberList: Array<ITeamMemberCard> = [
       github: "",
     },
     description:
-      "A technology enthusiast with a deep understanding of emerging trends",
+      "With rich back-end development experience, proficient in various programming languages and frameworks.",
+  },
+  {
+    profileUrl: SeintSinsarLwin,
+    name: "Seint Sinsar Lwin",
+    role: ["Product Designer"],
+    socials: {
+      twitter: "",
+      facebook: "",
+      linkedin: "",
+      github: "",
+    },
+    description:
+      "Possessing exceptional visual design skills and a deep understanding of interface layout, attentive to detail, and committed to creating beautiful and user-friendly interfaces.",
+  },
+  {
+    profileUrl: MinBala,
+    name: "Min Ye Htut Myat",
+    role: ["Product Designer"],
+    socials: {
+      twitter: "",
+      facebook: "",
+      linkedin: "",
+      github: "",
+    },
+    description:
+      "With abundant user experience design experience, adept at using data and user feedback for product iteration.",
   },
 ];
 

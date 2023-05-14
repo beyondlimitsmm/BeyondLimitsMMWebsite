@@ -45,8 +45,9 @@ export const WhyChooseUs = () => {
               <AiFillLike></AiFillLike>
             </div>
           }
-          title="Proven Track Record"
-          body="Our diverse portfolio of successful projects and satisfied clients speaks to our ability to transform businesses through innovative software."
+          title="Innovative Custom Solutions"
+          body="Tailored for Your Unique Business Needs
+          At Beyond Limits, we understand that every business has unique requirements. Our team of experts works closely with clients to develop innovative, customized software solutions that align with their specific goals and objectives, ensuring optimal results."
         ></WhyChooseUsCard>
         <WhyChooseUsCard
           variant={staggerVariants}
@@ -55,8 +56,9 @@ export const WhyChooseUs = () => {
               <AiOutlineLaptop></AiOutlineLaptop>
             </div>
           }
-          title="Technological Excellence"
-          body="Our team stays ahead of industry trends, utilizing the latest tools and technologies to create reliable, scalable solutions"
+          title="Experienced Team of Professionals"
+          body="Industry-leading Expertise at Your Service
+          Our team consists of highly skilled and experienced professionals with diverse backgrounds, who bring a wealth of knowledge and expertise to every project. This ensures that our clients receive top-notch software solutions that are both efficient and reliable."
         ></WhyChooseUsCard>
         <WhyChooseUsCard
           variant={staggerVariants}
@@ -65,8 +67,9 @@ export const WhyChooseUs = () => {
               <AiOutlineAppstoreAdd></AiOutlineAppstoreAdd>
             </div>
           }
-          title="Customized Solutions"
-          body="We develop bespoke software solutions that address your unique business challenges, streamline processes, and maximize efficiency. Our custom software solutions are designed to grow with your business, ensuring long-term success."
+          title="Agile Development Approach"
+          body="Flexible and Responsive to Your Changing Needs
+          We embrace the agile development methodology, which allows us to be highly adaptable to changing requirements and priorities. This approach ensures that our clients receive high-quality software solutions that are delivered on time and within budget."
         ></WhyChooseUsCard>
         <WhyChooseUsCard
           variant={staggerVariants}
@@ -75,8 +78,9 @@ export const WhyChooseUs = () => {
               <AiOutlineReload></AiOutlineReload>
             </div>
           }
-          title="Agile Approach"
-          body="We follow agile development practices, ensuring flexibility and efficiency throughout the development process."
+          title="Commitment to Continuous Improvement"
+          body="Staying Ahead of the Curve
+          At Beyond Limits, we are dedicated to staying up-to-date with the latest technology trends and best practices. Our commitment to continuous improvement ensures that our clients receive cutting-edge software solutions that help them maintain a competitive edge in their industry."
         ></WhyChooseUsCard>
         <WhyChooseUsCard
           variant={staggerVariants}
@@ -85,8 +89,9 @@ export const WhyChooseUs = () => {
               <AiFillWechat></AiFillWechat>
             </div>
           }
-          title="Dedicated Support"
-          body="Our commitment to your success extends beyond project completion. We offer ongoing support to ensure your software continues to deliver exceptional results."
+          title="Unrivaled Customer Support"
+          body="Your Success is Our Success
+          We believe in building long-lasting relationships with our clients, and this starts with providing exceptional customer support. Our team is readily available to address any concerns or issues that may arise, ensuring a smooth and successful software implementation process."
         ></WhyChooseUsCard>
       </motion.div>
     </section>
@@ -107,7 +112,7 @@ const WhyChooseUsCard = ({
   return (
     <motion.div
       variants={variant}
-      className="m-2 flex flex-col items-center gap-4 rounded-xl bg-[#F6F9FF] px-6 py-4 lg:basis-[48%] lg:flex-row"
+      className="m-2 flex flex-col items-center gap-6 rounded-xl bg-[#F6F9FF] px-8 py-4 lg:basis-[48%] lg:flex-row"
     >
       {icon}
       <div className="text-center lg:text-left">

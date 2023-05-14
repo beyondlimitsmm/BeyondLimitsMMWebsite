@@ -43,12 +43,12 @@ export const OurService = () => {
           <OurServiceCard
             imagePath={Saas}
             title="SAAS"
-            body="We develop bespoke software solutions that address your unique business challenges, streamline processes, and maximize efficiency."
+            body="Stand out in the business domain with its unique advantages. SaaS (Software as a Service) offers a convenient solution that eliminates the need for software installation and maintenance. With its flexible subscription model, SaaS caters to diverse requirements. By choosing SaaS, you gain the advantages of convenience, flexibility, customization, and continuous innovation, empowering your business to stay competitive and take it to the next level."
             bullets={[
-              "Issue printed or electronic receipts",
-              "Apply discounts and issue refunds",
-              "Keep recording sales even when offline",
-              "Connect a receipt printer, barcode scanner, and cash drawer",
+              "No cumbersome installation and maintenance",
+              "Flexible subscription model and cost savings",
+              "Quick deployment and user-friendly",
+              "Continuous innovation and automatic updates",
             ]}
           ></OurServiceCard>
 
@@ -56,19 +56,24 @@ export const OurService = () => {
             reverse
             imagePath={webdevelopment}
             title="Web Development"
-            body="We create responsive, feature-rich websites that deliver exceptional user experiences. We used Following Technologies."
-            bullets={["React", "Typescript", "Animations", "CSS"]}
+            body="Create scalable and visually stunning websites that provide a seamless user experience. From responsive design to optimized SEO, our web development services help you establish a captivating online presence and drive results."
+            bullets={[
+              "Scalable and dynamic websites",
+              "Engaging user experience",
+              "Responsive design",
+              "Search engine optimization (SEO)",
+            ]}
           ></OurServiceCard>
 
           <OurServiceCard
             imagePath={mobiledevelopment}
             title="Mobile App Development"
-            body="We develop bespoke software solutions that address your unique business challenges, streamline processes, and maximize efficiency."
+            body="Engage your audience with feature-rich mobile apps compatible with various platforms. Our mobile app development expertise ensures intuitive interfaces, seamless user experiences, and integration with device features, enabling direct interaction with your customers."
             bullets={[
-              "a long established",
-              "more-or-less normal distribution",
-              "Lorem Ipsum as their default model text",
-              "Various versions have evolved",
+              "Enhanced customer engagement",
+              "Platform versatility",
+              "Seamless user experience",
+              "Integration with device features",
             ]}
           ></OurServiceCard>
 
@@ -76,24 +81,24 @@ export const OurService = () => {
             reverse
             imagePath={uiux}
             title="UI/UX Design"
-            body="Our designers work closely with you to create intuitive, visually appealing useri nterfaces that align with your brand identity and resonate with your target audience."
+            body="Deliver user-centric designs that prioritize usability and aesthetics. Our UI/UX design services enhance user satisfaction through intuitive navigation, captivating visual appeal, and consistent branding, resulting in delightful experiences for your target audience."
             bullets={[
-              "User Research",
-              "Design Thinking Approach",
-              "Lean UX Aprroach",
-              "User Testing",
+              "User-centric interfaces",
+              "Visual appeal and branding",
+              "Intuitive navigation",
+              "Usability testing and optimization",
             ]}
           ></OurServiceCard>
 
           <OurServiceCard
             imagePath={cloud}
-            title="Cloud Solutions"
-            body="We help businesses harness the power of the cloud by designing and implementing scalable, secure, and cost-effective cloud-based solutions. "
+            title="Marketing Solutions"
+            body="Reach your target audience effectively with targeted marketing strategies driven by data insights. Our marketing solutions offer multichannel integration, personalization, and automation, empowering you to maximize brand visibility and achieve marketing success."
             bullets={[
-              "a long established",
-              "more-or-less normal distribution",
-              "Lorem Ipsum as their default model text",
-              "Various versions have evolved",
+              "Targeted audience reach",
+              "Data-driven decision-making",
+              "Multichannel marketing integration",
+              "Personalization and automation",
             ]}
           ></OurServiceCard>
         </div>
