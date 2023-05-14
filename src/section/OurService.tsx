@@ -7,7 +7,7 @@ import {
   AiOutlineMobile,
   AiOutlinePicLeft,
 } from "react-icons/ai";
-import cloud from "../assets/services/service-cloud.svg";
+import marketing from "../assets/services/service-marketing.svg";
 import mobiledevelopment from "../assets/services/service-mobiledevelopment.svg";
 import Saas from "../assets/services/service-saas.svg";
 import uiux from "../assets/services/service-uiux.svg";
@@ -91,7 +91,7 @@ export const OurService = () => {
           ></OurServiceCard>
 
           <OurServiceCard
-            imagePath={cloud}
+            imagePath={marketing}
             title="Marketing Solutions"
             body="Reach your target audience effectively with targeted marketing strategies driven by data insights. Our marketing solutions offer multichannel integration, personalization, and automation, empowering you to maximize brand visibility and achieve marketing success."
             bullets={[
@@ -155,7 +155,7 @@ const OurServiceCard = ({
           reverse && "md:ml-6"
         }`}
       >
-        <h2 className="mb-2 text-xl font-semibold text-header-2 lg:text-[32px] lg:leading-[48px]">
+        <h2 className="mb-2 text-xl font-semibold text-primary lg:text-[32px] lg:leading-[48px]">
           {title}
         </h2>
 
@@ -164,12 +164,12 @@ const OurServiceCard = ({
         </h5>
 
         {bullets.map((bullet, index) => (
-          <li
-            key={index}
-            className="mb-1 list-disc text-sm font-medium text-text-secondary45 marker:text-primary lg:mb-2 lg:text-base"
-          >
-            {bullet}
-          </li>
+          <div key={index} className="mb-1 flex items-center lg:mb-2">
+            <span className="mr-4 h-2 w-2 rounded-full bg-primary"></span>
+            <li className="text-sm font-medium text-text-secondary45  lg:text-base">
+              {bullet}
+            </li>
+          </div>
         ))}
       </div>
     </motion.div>

@@ -25,7 +25,7 @@ export const HeroSection = () => {
         <div className="w-4/5 md:mr-8 md:w-1/2 lg:ml-10 lg:mr-24">
           <h1 className="hidden font-medium leading-[2.5rem] text-text-secondary45 md:block md:text-[2rem] lg:text-[4rem] lg:leading-[5rem]">
             Innovative Software Solutions for
-            <span className="text-primary7"> Digital World</span>
+            <span className="text-primary"> Digital World</span>
           </h1>
           <h5 className="mb-5 mt-16 font-medium text-text-secondary45 md:my-5">
             Beyond Limits Technologies excels in
@@ -74,7 +74,7 @@ export const HeroSection = () => {
 
         <h1 className="mx-6 my-14 block text-[2rem] leading-[2.5rem] text-text-secondary45 md:hidden">
           Innovative Software Solutions for
-          <span className="text-primary7"> Digital World</span>
+          <span className="font-medium text-primary"> Digital World</span>
         </h1>
       </div>
     </section>
