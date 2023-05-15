@@ -111,12 +111,13 @@ export const Footer = () => {
           <SocialCircle
             title="LinkedIn"
             icon={<FiLinkedin size={20} />}
+            customStyle="hover:bg-[#0072b1] hover:text-white hover:border-[#0072b1]"
             link="https://www.linkedin.com/company/beyond-limits-technologies-myanmar/"
           ></SocialCircle>
           <SocialCircle
             title="Facebook"
             icon={<FiFacebook size={20} />}
-            customStyle="bg-primary text-white border-primary"
+            customStyle="hover:bg-[#1778F2] hover:text-white hover:border-[#1778F2]"
             link="https://www.facebook.com/beyondlimitsmm"
           ></SocialCircle>
           {/* <SocialCircle icon={<FiInstagram size={20} />} link=""></SocialCircle>
@@ -130,12 +131,13 @@ export const Footer = () => {
           <SocialCircle
             title="LinkedIn"
             icon={<FiLinkedin size={20} />}
+            customStyle="hover:bg-[#0072b1] hover:text-white hover:border-[#0072b1]"
             link="https://www.linkedin.com/company/beyond-limits-technologies-myanmar/"
           ></SocialCircle>
           <SocialCircle
             title="Facebook"
             icon={<FiFacebook size={20} />}
-            customStyle="bg-primary text-white border-primary"
+            customStyle="hover:bg-[#1778F2] hover:text-white hover:border-[#1778F2]"
             link="https://www.facebook.com/beyondlimitsmm"
           ></SocialCircle>
           {/* <SocialCircle icon={<FiInstagram size={20} />} link=""></SocialCircle>
@@ -159,7 +161,7 @@ export const SocialCircle = ({
 }) => {
   return (
     <div
-      className={`flex h-10 w-10 items-center justify-center rounded-full border text-black ${
+      className={`flex h-10 w-10 items-center justify-center rounded-full border border-text-secondary45 text-black ${
         customStyle === undefined ? " border-text-secondary45" : customStyle
       }`}
     >
