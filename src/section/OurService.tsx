@@ -43,7 +43,7 @@ export const OurService = () => {
           <OurServiceCard
             imagePath={Saas}
             title="SAAS"
-            body="Stand out in the business domain with its unique advantages. SaaS (Software as a Service) offers a convenient solution that eliminates the need for software installation and maintenance. With its flexible subscription model, SaaS caters to diverse requirements. By choosing SaaS, you gain the advantages of convenience, flexibility, customization, and continuous innovation, empowering your business to stay competitive and take it to the next level."
+            body="Stand out in the business domain with its unique advantages. SaaS (Software as a Service) offers a convenient solution that eliminates the need for software installation and maintenance. With its flexible subscription model, SaaS caters to diverse requirements."
             bullets={[
               "No cumbersome installation and maintenance",
               "Flexible subscription model and cost savings",

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import "./App.css";
 import Messenger from "./assets/messenger.png";
+
 import { Footer } from "./components/Footer";
 import { NavBar } from "./components/NavBar";
 import { ContactSection } from "./section/ContactSection";
@@ -22,11 +23,11 @@ function App() {
       <ContactSection></ContactSection>
       <Footer></Footer>
 
-      <div className="fixed right-5 bottom-5 z-50 h-14 w-14 rounded-full bg-white p-2 shadow-xl md:right-10 md:bottom-10">
+      {/* <div className="fixed right-5 bottom-5 z-50 h-14 w-14 rounded-full bg-white p-2 shadow-xl md:right-10 md:bottom-10">
         <a target="_blank" href="https://m.me/beyondlimitsmm">
           <img src={Messenger} alt="Messenger" width={56} height={56} />
         </a>
-      </div>
+      </div> */}
     </div>
   );
 }
