@@ -12,7 +12,7 @@ import { OurTeam } from "./section/TeamMember";
 import { WhyChooseUs } from "./section/WhyChooseUs";
 import { Workflow } from "./section/Workflow";
 
-const TRACKING_ID = import.meta.env.VITE_TRACKING_ID ?? "";
+const TRACKING_ID = import.meta.env.VITE_TRACKING_ID;
 REACTGA.initialize(TRACKING_ID);
 
 function App() {
