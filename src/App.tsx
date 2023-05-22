@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import "./App.css";
 import Messenger from "./assets/messenger.png";
 
+import REACTGA from "react-ga";
 import { Footer } from "./components/Footer";
 import { NavBar } from "./components/NavBar";
 import { ContactSection } from "./section/ContactSection";
@@ -11,7 +12,14 @@ import { OurTeam } from "./section/TeamMember";
 import { WhyChooseUs } from "./section/WhyChooseUs";
 import { Workflow } from "./section/Workflow";
 
+const TRACKING_ID = import.meta.env.VITE_TRACKING_ID ?? "";
+REACTGA.initialize(TRACKING_ID);
+
 function App() {
+  useEffect(() => {
+    REACTGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   return (
     <div className="App relative">
       <NavBar></NavBar>
@@ -22,12 +30,6 @@ function App() {
       <WhyChooseUs></WhyChooseUs>
       <ContactSection></ContactSection>
       <Footer></Footer>
-
-      {/* <div className="fixed right-5 bottom-5 z-50 h-14 w-14 rounded-full bg-white p-2 shadow-xl md:right-10 md:bottom-10">
-        <a target="_blank" href="https://m.me/beyondlimitsmm">
-          <img src={Messenger} alt="Messenger" width={56} height={56} />
-        </a>
-      </div> */}
     </div>
   );
 }

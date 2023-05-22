@@ -14,10 +14,12 @@
     "lottie-react": "^2.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-ga": "^3.3.1",
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.11.1"
   },
   "devDependencies": {
+    "@types/node": "^20.2.3",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",
