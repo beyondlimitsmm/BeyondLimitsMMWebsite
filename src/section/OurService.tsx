@@ -7,7 +7,7 @@ import {
   AiOutlineMobile,
   AiOutlinePicLeft,
 } from "react-icons/ai";
-import marketing from "../assets/services/service-marketing.svg";
+import marketing from "../assets/services/service-marketing.png";
 import mobiledevelopment from "../assets/services/service-mobiledevelopment.svg";
 import Saas from "../assets/services/service-saas.svg";
 import uiux from "../assets/services/service-uiux.svg";
@@ -100,6 +100,7 @@ export const OurService = () => {
               "Multichannel marketing integration",
               "Personalization and automation",
             ]}
+            imageClassName="max-h-[380px] max-w-[380px]"
           ></OurServiceCard>
         </div>
       </div>
@@ -113,12 +114,14 @@ const OurServiceCard = ({
   body,
   reverse = false,
   bullets,
+  imageClassName,
 }: {
   imagePath: string;
   title: string;
   body: string;
   bullets: string[];
   reverse?: boolean;
+  imageClassName?: string;
 }) => {
   const [loading, setLoading] = useState(true);
 
@@ -146,7 +149,7 @@ const OurServiceCard = ({
           ]}
           src={imagePath}
           alt={title}
-          className="scale-75 lg:scale-100"
+          className={`scale-75 lg:scale-100 ${imageClassName}`}
           onLoad={() => setLoading(false)}
         />
       </div>
