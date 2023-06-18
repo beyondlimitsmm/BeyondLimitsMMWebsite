@@ -1,54 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beyond Limits Technologies</title>
-    <meta
-      name="description"
-      content="Software Solutions for digital transformations"
-    />
-    <meta
-      name="keywords"
-      content="customized, software, cloud, solutions, mobile, applications,"
-    />
-    <meta name="author" content="Beyond Limits Technologies Myanmar" />
-  </head>
-  <body>
-    <div id="root"></div>
 
-    <!-- Messenger Chat Plugin Code -->
-    <div id="fb-root"></div>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beyond Limits Technologies</title>
+  <meta name="description" content="Software Solutions for digital transformations" />
+  <meta name="keywords" content="customized, software, cloud, solutions, mobile, applications," />
+  <meta name="author" content="Beyond Limits Technologies Myanmar" />
 
-    <!-- Your Chat Plugin code -->
-    <div id="fb-customer-chat" class="fb-customerchat"></div>
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://beyondlimitsmm.com/vertical_lockup.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Beyond Limits Technologies">
+  <meta property="og:description" content="Software Solutions for digital transformations">
+  <meta property="og:image" content="https://beyondlimitsmm.com/vertical_lockup.png">
 
-    <script type="module" src="/src/main.tsx"></script>
-    <script>
-      var chatbox = document.getElementById("fb-customer-chat");
-      chatbox.setAttribute("page_id", "117880877870124");
-      chatbox.setAttribute("attribution", "biz_inbox");
-    </script>
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="beyondlimitsmm.com">
+  <meta property="twitter:url" content="https://beyondlimitsmm.com/vertical_lockup.png">
+  <meta name="twitter:title" content="Beyond Limits Technologies">
+  <meta name="twitter:description" content="Software Solutions for digital transformations">
+  <meta name="twitter:image" content="https://beyondlimitsmm.com/vertical_lockup.png">
 
-    <!-- Your SDK code -->
-    <script>
-      window.fbAsyncInit = function () {
-        FB.init({
-          xfbml: true,
-          version: "v16.0",
-        });
-      };
+</head>
 
-      (function (d, s, id) {
-        var js,
-          fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      })(document, "script", "facebook-jssdk");
-    </script>
-  </body>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>
